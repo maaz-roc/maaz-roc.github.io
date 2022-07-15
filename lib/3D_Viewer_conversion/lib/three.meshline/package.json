@@ -1,0 +1,61 @@
+{
+  "_from": "three.meshline",
+  "_id": "three.meshline@1.4.0",
+  "_inBundle": false,
+  "_integrity": "sha512-A8IsiMrWP8zmHisGDAJ76ZD7t/dOF/oCe/FUKNE6Bu01ZYEx8N6IlU/1Plb2aOZtAuWM2A8s8qS3hvY0OFuvOw==",
+  "_location": "/three.meshline",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "three.meshline",
+    "name": "three.meshline",
+    "escapedName": "three.meshline",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/three.meshline/-/three.meshline-1.4.0.tgz",
+  "_shasum": "2a483cbd99cd5f74cf6ee5c253a9a4b4a8169178",
+  "_spec": "three.meshline",
+  "_where": "C:\\Users\\crabo\\My Drive\\jobs\\Novo Tech\\CrossSection2022\\lib\\3D_Viewer_conversion",
+  "author": {
+    "name": "Jaume Sanchez",
+    "email": "the.spite@gmail.com",
+    "url": "https://www.clicktorelease.com"
+  },
+  "bugs": {
+    "url": "https://github.com/spite/THREE.MeshLine/issues"
+  },
+  "bundleDependencies": false,
+  "deprecated": false,
+  "description": "Mesh replacement for THREE.Line",
+  "files": [
+    "LICENSE",
+    "History.md",
+    "README.md",
+    "src/THREE.MeshLine.js"
+  ],
+  "homepage": "https://github.com/spite/THREE.MeshLine#readme",
+  "keywords": [
+    "lines",
+    "threejs",
+    "mesh",
+    "line"
+  ],
+  "license": "MIT",
+  "main": "src/THREE.MeshLine.js",
+  "name": "three.meshline",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/spite/THREE.MeshLine.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "version": "1.4.0"
+}
