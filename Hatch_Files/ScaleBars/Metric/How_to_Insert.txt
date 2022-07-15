@@ -1,0 +1,1 @@
+place the image on canvas with a width = 302.36 px

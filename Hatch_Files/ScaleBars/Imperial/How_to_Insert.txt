@@ -1,0 +1,2 @@
+- place the image on canvas with a width = 192 px if image width is 4813 px
+- place the image on canvas with a width = 144 px if image width is 3613 px
