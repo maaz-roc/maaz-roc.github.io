@@ -1,0 +1,15 @@
+[1mdiff --git a/terrain.js b/terrain.js[m
+[1mindex 3dddfd1..be75d7a 100644[m
+[1m--- a/terrain.js[m
+[1m+++ b/terrain.js[m
+[36m@@ -179,6 +179,10 @@[m [mconst updateMode = (viewer3d, vis, terrainColor='#999999') => {[m
+   });[m
+ };[m
+ [m
+[32m+[m[32masync function getGoogleTerrain (lat, lng, siteEW, siteEN) {[m
+[32m+[m
+[32m+[m[32m}[m
+[32m+[m
+ async function getTerrain(viewer3d, { lat, lng, radius, /*zoom*/resolution, terrain, opacity, terrainColor='#999999'}) {[m
+   let terrainObj = null;[m
+   const { renderer } = viewer3d;[m
