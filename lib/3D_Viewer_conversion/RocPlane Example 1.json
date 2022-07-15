@@ -1,0 +1,204 @@
+{
+  "Wedge": {
+    "color": "#F1952E",
+    "transparency": "85",
+    "texture_file": "Hatch_Files\\PNG\\Rock\\Wedge.png",
+    "texture_scale": "1",
+    "VerticesArr": [
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        59.58767962971051,
+        0,
+        50
+      ],
+      [
+        69.58767962971051,
+        0,
+        51.76326980708465
+      ],
+      [
+        69.58767962971051,
+        0,
+        40.17646556649479
+      ]
+    ]
+  },
+  "Base": {
+    "color": "#FEE9D3",
+    "transparency": "100",
+    "texture_file": "Hatch_Files\\PNG\\Rock\\Base.png",
+    "texture_scale": "5",
+    "IsHollow": true,
+    "VerticesArr": [
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        69.58767962971051,
+        0,
+        40.17646556649479
+      ],
+      [
+        69.58767962971051,
+        0,
+        51.76326980708465
+      ],
+      [
+        79.58767962971051,
+        0,
+        53.526539614169295
+      ],
+      [
+        79.58767962971051,
+        0,
+        0
+      ]
+    ]
+  },
+  "Ponding_Water": {
+    "isActive": true,
+    "depth_z": 30,
+    "color": "#00FFFF",
+    "transparency": "55",
+    "texture_file": "",
+    "texture_scale": "1"
+  },
+  "Contact_Water": {
+    "isActive": true,
+    "pointsArr": [
+        [
+            0,
+            0,
+            0
+        ],
+        [
+            25.9807621135,
+            0,
+            15
+        ]
+    ],
+    "color": "#00FFFF",
+    "transparency": "",
+    "texture_file": "",
+    "texture_scale": ""
+},
+  "Seismic": {
+    "isActive": true,
+    "info": "",
+    "location": [
+        0,
+        0,
+        0
+    ],
+    "Angle" : "-10",
+    "value": "10 MN",
+    "color": "#b01414",
+    "transparency": "70"
+},
+"Forces": [
+    {
+        "id": 1,
+        "info": "",
+        "isActive": true,
+        "location": [
+            35.748,
+            0,
+            30
+       ],
+        "Angle": "-10",
+        "value": "10 MN",
+        "color": "#b01414",
+        "transparency": ""
+    },
+    {
+        "id": 2,
+        "info": "",
+        "isActive": true,
+        "location": [
+            41.706,
+            0,
+            35
+        ],
+        "Angle": "-10",
+        "value": "0 MN",
+        "color": "#b01414",
+        "transparency": "70"
+    }
+],
+   "Support": {
+       "Bolt": [
+         {
+           "id":1,
+           "isActive": true,
+           "info": "",
+           "location": [
+            53.662,
+            0,
+            45
+           ],
+           "Angle": "-35",
+           "value": "50 M",
+           "color": "#444433",
+           "transparency": "70"
+         },
+       {
+         "id":2,
+         "isActive": true ,
+         "info":"",
+         "location": [
+          47.664,
+          0,
+          40
+         ],
+         "Angle": "-40",
+         "value": "60 M",
+         "color": "#444433",
+         "transparency": "70"
+     },
+     {
+      "id":3,
+      "isActive": false ,
+      "info":"",
+      "location": [
+        30.34,
+        0,
+        60
+      ],
+      "Angle": "-35",
+      "value": "50 M",
+      "color": "#444433",
+      "transparency": "70"
+  }
+],
+    "Slope_Surcharge": {
+        "isActive": true ,
+        "info": "",
+        "Angle": "-25",
+        "value": "1 MPa",
+        "color": "",
+        "transparency": "70"
+    },
+    "Upper_Surcharge": {
+      "isActive": true,
+      "info":"",
+      "Angle": "-40",
+      "value": "1 MPa",
+      "color": "#444433",
+      "transparency": "70"
+    }
+   },
+   "Settings": {
+    "Model_thickness": "88.83862424103876",
+    "contactFace_color": "#FEE3A7",
+    "Slope_Angle": 50,
+    "Failure_Plane_Angle": 35,
+    "Arrow_Length": 10,
+    "result": "<table><tr><th>Factor of Safety</th><th>1</th></tr><tr><th>Driving Force</th><th>/18.0071</th></tr><tr><th>Resisting Force</th><th>18.0071</th></tr><tr><th>Wedge Weight</th><th>31.3945</th></tr><tr><th>Wedge Volume</th><th>1207.4803</th></tr><tr><th>Shear Strength</th><th>0.15116</th></tr><tr><th>Normal Force</th><th>25.7169</th></tr><tr><th>Seismic Force</th><th>0</th></tr><tr><th>Plane Waviness</th><th>[object Object]</th></tr><tr><th>Active Bolt Force</th><th>[object Object]</th></tr><tr><th>Active Bolt Angle</th><th>[object Object]</th></tr><tr><th>Passive Bolt Force</th><th>[object Object]</th></tr><tr><th>Passive Bolt Angle</th><th>[object Object]</th></tr><tr><th>External Force</th><th>0</th></tr><tr><th>External Force Angle</th><th>0</th></tr><tr><th>Ponded Water Force on Slope</th><th>[object Object]</th></tr><tr><th>Water Force on Failure Plane</th><th>0</th></tr><tr><th>Water Force on Tension Crack</th><th>0</th></tr></table>"
+}
+}

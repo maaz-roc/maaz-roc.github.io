@@ -1,0 +1,12 @@
+{
+    "type": "module",
+    "dependencies": {
+        "@flatten-js/core": "^1.3.1",
+        "three": "^0.135.0",
+        "three.meshline": "^1.4.0",
+        "troika-three-text": "^0.46.4"
+    },
+    "devDependencies": {
+        "@types/jquery": "^3.5.11"
+    }
+}

@@ -1,0 +1,165 @@
+[
+  {
+    "th_id": "6461F17C-6369-E838-ADB9-3A0021CDF2F2",
+    "th_title": "BH01",
+    "th_type": "Drill Hole",
+    "th_depth": 29.0,
+    "th_coordinates": "123.5, 235.6, 18.5",
+    "th_layers": [
+      {
+        "layer_from": 0.0,
+        "layer_to": 3.5,
+        "layer_title": "Fill Material",
+        "layer_descr": "Construction debris, concrete pieces, etc",
+        "layer_symbol": "FL",
+        "layer_unitweight": 18.0,
+        "layer_finecontent": 5.0
+      },
+      {
+        "layer_from": 3.5,
+        "layer_to": 11.0,
+        "layer_title": "Silty Clay",
+        "layer_descr": "Silty clay with trace sand, moist",
+        "layer_symbol": "CL",
+        "layer_unitweight": 18.0,
+        "layer_finecontent": 5.0
+      },
+      {
+        "layer_from": 11.0,
+        "layer_to": 15.0,
+        "layer_title": "Clayey Silt",
+        "layer_descr": "Non-plastic silt, clayey",
+        "layer_symbol": "ML",
+        "layer_unitweight": 18.0,
+        "layer_finecontent": 5.0
+      },
+      {
+        "layer_from": 15.0,
+        "layer_to": 19.0,
+        "layer_title": "Sand",
+        "layer_descr": "Clayey sand with gravel, and trace silt",
+        "layer_symbol": "SC",
+        "layer_unitweight": 18.0,
+        "layer_finecontent": 5.0
+      },
+      {
+        "layer_from": 19.0,
+        "layer_to": 23.0,
+        "layer_title": "Gravel",
+        "layer_descr": "Poorly graded gravel, trace sand",
+        "layer_symbol": "GP",
+        "layer_unitweight": 20.0,
+        "layer_finecontent": 33.0
+      },
+      {
+        "layer_from": 23.0,
+        "layer_to": 29.0,
+        "layer_title": "Clayey Silt",
+        "layer_descr": "Low plasticity silt",
+        "layer_symbol": "ML",
+        "layer_unitweight": 19.0,
+        "layer_finecontent": 75.0
+      }
+    ]
+  },
+  {
+    "th_id": "9173FC1E-6AE6-4F91-86C7-85F8B51D17A8",
+    "th_title": "BH02",
+    "th_type": "Drill Hole",
+    "th_depth": 25.0,
+    "th_coordinates": "112.5, 243.2, 17.5",
+    "th_layers": [
+      {
+        "layer_from": 0.0,
+        "layer_to": 2.3,
+        "layer_title": "Fill Material",
+        "layer_descr": "Construction debris, silty sand and pieces of plastic",
+        "layer_symbol": "FL",
+        "layer_unitweight": 18.0,
+        "layer_finecontent": 5.0
+      },
+      {
+        "layer_from": 2.3,
+        "layer_to": 8.0,
+        "layer_title": "Sand",
+        "layer_descr": "Silty sand with gravel, damp to moisture, inferred dense",
+        "layer_symbol": "SM",
+        "layer_unitweight": 18.0,
+        "layer_finecontent": 5.0
+      },
+      {
+        "layer_from": 8.0,
+        "layer_to": 15.0,
+        "layer_title": "Gravelly Sand",
+        "layer_descr": "Poorly graded sand with gravel, damp, inferred loose to compact",
+        "layer_symbol": "SP-SM",
+        "layer_unitweight": 18.0,
+        "layer_finecontent": 5.0
+      },
+      {
+        "layer_from": 15.0,
+        "layer_to": 25,
+        "layer_title": "Silty Sand (Till-Like)",
+        "layer_descr": "Till-Like sand with occasional cobbles, moist, very dense",
+        "layer_symbol": "TILL",
+        "layer_unitweight": 18.0,
+        "layer_finecontent": 5.0
+      }
+    ]
+  },
+  {
+    "th_id": "9173DC1E-9AE6-4D91-89C7-85F8B51D17A8",
+    "th_title": "BH03",
+    "th_type": "Drill Hole",
+    "th_depth": 22.0,
+    "th_coordinates": "122.5, 230.2, 16.5",
+    "th_layers": [
+      {
+        "layer_from": 0.0,
+        "layer_to": 2.0,
+        "layer_title": "Fill Material",
+        "layer_descr": "Construction debris mixed with silty sand",
+        "layer_symbol": "FL",
+        "layer_unitweight": 19.0,
+        "layer_finecontent": 5.0
+      },
+      {
+        "layer_from": 2.0,
+        "layer_to": 6.0,
+        "layer_title": "Silty Clay",
+        "layer_descr": "Silty clay with trace sand, damp to moisture",
+        "layer_symbol": "CL",
+        "layer_unitweight": 18.0,
+        "layer_finecontent": 5.0
+      },
+      {
+        "layer_from": 6.0,
+        "layer_to": 10.0,
+        "layer_title": "Silty Sand",
+        "layer_descr": "Silty sand with gravel, damp to moisture, inferred dense",
+        "layer_symbol": "SM",
+        "layer_unitweight": 18.0,
+        "layer_finecontent": 5.0
+      },
+      {
+        "layer_from": 10.0,
+        "layer_to": 17.0,
+        "layer_title": "Gravelly Sand",
+        "layer_descr": "Poorly graded sand with gravel, damp, inferred loose to compact",
+        "layer_symbol": "SP-SM",
+        "layer_unitweight": 18.0,
+        "layer_finecontent": 5.0
+      },
+      {
+        "layer_from": 17.0,
+        "layer_to": 22,
+        "layer_title": "Silty Sand (Till-Like)",
+        "layer_descr": "Till-Like sand with occasional cobbles, moist, very dense",
+        "layer_symbol": "TILL",
+        "layer_unitweight": 18.0,
+        "layer_finecontent": 5.0
+      }
+    ]
+  }
+
+]
