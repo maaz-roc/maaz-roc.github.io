@@ -1,0 +1,811 @@
+{
+    "title": "Section A",
+    "data": [
+        {
+            "name": "BH-1",
+            "general": {
+                "x": 13.8,
+                "z": 26.5,
+                "water": 3.4,
+                "disp_w": 0.25,
+                "test_title": "SPT Blows (N)",
+                "test_data": "0.3048,19|0.6096,19|0.9144,11|1.2192,8|1.524,7|1.8288,8|2.1336,7|2.4384,19|2.7432,13|3.048,35|3.3528,78|3.6576,86|3.9624,112|4.2672,117|4.572,128|4.8768,130|5.1816,115|5.4864,89|5.7912,86|6.096,74|6.4008,61|6.7056,30|7.0104,24|7.3152,9|7.62,9|7.9248,7|8.2296,7|8.5344,7|8.8392,6|9.144,7|9.4488,11|9.7536,19|10.0584,37|10.3632,32|10.668,35|10.9728,35|11.2776,30|11.5824,26|11.8872,19|12.192,15|12.4968,22|12.8016,30|13.1064,37|13.4112,28|13.716,35|14.0208,43|14.3256,41|14.6304,52|14.9352,54|15.24,54|15.5448,50|15.8496,54|16.1544,58|16.4592,61|16.764,56|17.0688,56|17.3736,43|17.6784,35|17.9832,37|18.288,30|18.5928,26|18.8976,19|19.2024,19|19.5072,19|19.812,28|20.1168,39|20.4216,35|20.7264,24|21.0312,35|21.336,32|21.6408,19|21.9456,19|22.2504,35|22.5552,28|22.86,30|23.1648,26|23.4696,37|23.7744,63|24.0792,37",
+                "test_position": "left",
+                "plunge": 90
+            },
+            "soillayer": [
+                {
+                    "from": 0,
+                    "to": 1.5,
+                    "layerTitle": "Fill Material",
+                    "layerSymbol": "FL",
+                    "timestamp": 4
+                },
+                {
+                    "from": 1.5,
+                    "to": 3.1,
+                    "layerTitle": "Silty Sand",
+                    "layerSymbol": "SM",
+                    "timestamp": 5
+                },
+                {
+                    "from": 3.1,
+                    "to": 9.75,
+                    "layerTitle": "Gravel",
+                    "layerSymbol": "GW",
+                    "timestamp": 6
+                },
+                {
+                    "from": 9.75,
+                    "to": 15,
+                    "layerTitle": "Till",
+                    "layerSymbol": "TILL",
+                    "timestamp": 7
+                }
+            ],
+            "ally": [
+                {
+                    "timestamp": 8,
+                    "y": 0,
+                    "x": 13.8,
+                    "bhname": "BH-1",
+                    "left": true,
+                    "yz": 26.5,
+                    "xx": 13.05,
+                    "correct_yz": 26.5
+                },
+                {
+                    "timestamp": 9,
+                    "y": 0,
+                    "x": 13.8,
+                    "bhname": "BH-1",
+                    "yz": 26.5,
+                    "xx": 14.55,
+                    "correct_yz": 26.5
+                },
+                {
+                    "timestamp": 10,
+                    "y": 1.5,
+                    "x": 13.8,
+                    "bhname": "BH-1",
+                    "left": true,
+                    "yz": 25,
+                    "xx": 13.05,
+                    "correct_yz": 25
+                },
+                {
+                    "timestamp": 11,
+                    "y": 1.5,
+                    "x": 13.8,
+                    "bhname": "BH-1",
+                    "yz": 25,
+                    "xx": 14.55,
+                    "correct_yz": 25
+                },
+                {
+                    "timestamp": 12,
+                    "y": 3.1,
+                    "x": 13.8,
+                    "bhname": "BH-1",
+                    "left": true,
+                    "yz": 23.4,
+                    "xx": 13.05,
+                    "correct_yz": 23.4
+                },
+                {
+                    "timestamp": 13,
+                    "y": 3.1,
+                    "x": 13.8,
+                    "bhname": "BH-1",
+                    "yz": 23.4,
+                    "xx": 14.55,
+                    "correct_yz": 23.4
+                },
+                {
+                    "timestamp": 14,
+                    "y": 9.75,
+                    "x": 13.8,
+                    "bhname": "BH-1",
+                    "left": true,
+                    "yz": 16.75,
+                    "xx": 13.05,
+                    "correct_yz": 16.75
+                },
+                {
+                    "timestamp": 15,
+                    "y": 9.75,
+                    "x": 13.8,
+                    "bhname": "BH-1",
+                    "yz": 16.75,
+                    "xx": 14.55,
+                    "correct_yz": 16.75
+                },
+                {
+                    "timestamp": 16,
+                    "y": 15,
+                    "x": 13.8,
+                    "bhname": "BH-1",
+                    "left": true,
+                    "yz": 11.5,
+                    "xx": 13.050000000000002,
+                    "correct_yz": 11.5
+                },
+                {
+                    "timestamp": 17,
+                    "y": 15,
+                    "x": 13.8,
+                    "bhname": "BH-1",
+                    "yz": 11.5,
+                    "xx": 14.550000000000002,
+                    "correct_yz": 11.5
+                }
+            ],
+            "waterPoint": {
+                "timestamp": 18,
+                "bhname": "BH-1",
+                "x": 13.8,
+                "y": 3.4,
+                "xx": 13.8,
+                "yz": 29.9,
+                "textHidden": true,
+                "correct_yz": 23.1
+            }
+        },
+        {
+            "name": "BH-2",
+            "general": {
+                "x": 33.3,
+                "z": 24.1,
+                "water": 1.4,
+                "disp_w": 0.25,
+                "plunge": 80,
+                "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPLUNGE WAS": "ADDED"
+            },
+            "soillayer": [
+                {
+                    "from": 0,
+                    "to": 2.1,
+                    "layerTitle": "Fill Material",
+                    "layerSymbol": "FL",
+                    "timestamp": 19
+                },
+                {
+                    "from": 2.1,
+                    "to": 4.5,
+                    "layerTitle": "Silty Sand",
+                    "layerSymbol": "SM",
+                    "timestamp": 20
+                },
+                {
+                    "from": 4.5,
+                    "to": 5,
+                    "layerTitle": "Gravel",
+                    "layerSymbol": "GW",
+                    "timestamp": 21
+                },
+                {
+                    "from": 5,
+                    "to": 11.5,
+                    "layerTitle": "Till",
+                    "layerSymbol": "TILL",
+                    "timestamp": 22
+                }
+            ],
+            "ally": [
+                {
+                    "timestamp": 23,
+                    "y": 0,
+                    "x": 33.3,
+                    "bhname": "BH-2",
+                    "left": true,
+                    "yz": 24.1,
+                    "xx": 32.55,
+                    "correct_yz": 24.1
+                },
+                {
+                    "timestamp": 24,
+                    "y": 0,
+                    "x": 33.3,
+                    "bhname": "BH-2",
+                    "yz": 24.1,
+                    "xx": 34.05,
+                    "correct_yz": 24.1
+                },
+                {
+                    "timestamp": 25,
+                    "y": 2.1,
+                    "x": 33.3,
+                    "bhname": "BH-2",
+                    "left": true,
+                    "yz": 22.031903718674364,
+                    "xx": 32.91466117310055,
+                    "correct_yz": 22.031903718674364
+                },
+                {
+                    "timestamp": 26,
+                    "y": 2.1,
+                    "x": 33.3,
+                    "bhname": "BH-2",
+                    "yz": 22.031903718674364,
+                    "xx": 34.41466117310055,
+                    "correct_yz": 22.031903718674364
+                },
+                {
+                    "timestamp": 27,
+                    "y": 4.5,
+                    "x": 33.3,
+                    "bhname": "BH-2",
+                    "left": true,
+                    "yz": 19.668365111445066,
+                    "xx": 33.331416799501184,
+                    "correct_yz": 19.668365111445066
+                },
+                {
+                    "timestamp": 28,
+                    "y": 4.5,
+                    "x": 33.3,
+                    "bhname": "BH-2",
+                    "yz": 19.668365111445066,
+                    "xx": 34.831416799501184,
+                    "correct_yz": 19.668365111445066
+                },
+                {
+                    "timestamp": 29,
+                    "y": 5,
+                    "x": 33.3,
+                    "bhname": "BH-2",
+                    "left": true,
+                    "yz": 19.17596123493896,
+                    "xx": 33.41824088833465,
+                    "correct_yz": 19.17596123493896
+                },
+                {
+                    "timestamp": 30,
+                    "y": 5,
+                    "x": 33.3,
+                    "bhname": "BH-2",
+                    "yz": 19.17596123493896,
+                    "xx": 34.91824088833465,
+                    "correct_yz": 19.17596123493896
+                },
+                {
+                    "timestamp": 31,
+                    "y": 11.5,
+                    "x": 33.3,
+                    "bhname": "BH-2",
+                    "left": true,
+                    "yz": 12.774710840359608,
+                    "xx": 34.5469540431697,
+                    "correct_yz": 12.774710840359608
+                },
+                {
+                    "timestamp": 32,
+                    "y": 11.5,
+                    "x": 33.3,
+                    "bhname": "BH-2",
+                    "yz": 12.774710840359608,
+                    "xx": 36.0469540431697,
+                    "correct_yz": 12.774710840359608
+                }
+            ],
+            "waterPoint": {
+                "timestamp": 33,
+                "bhname": "BH-2",
+                "x": 33.3,
+                "y": 1.4,
+                "xx": 34.19990265356115,
+                "yz": 25.17246222036657,
+                "textHidden": true,
+                "correct_yz": 23.027537779633434
+            }
+        },
+        {
+            "name": "BH-5",
+            "general": {
+                "x": 50.1,
+                "z": 28.6,
+                "water": -9999,
+                "disp_w": 0.25,
+                "test_title": "Some Test (mm/s)",
+                "test_data": "0.70,59|1.6096,43|2.9144,52|3.2192,47|4.524,40|5.8288,33|6.1336,36|7.4384,39|8.7432,42|9.048,29|11.38,28|12.76,22|13.14,12|14.72,17",
+                "test_position": "right",
+                "plunge": 90
+            },
+            "soillayer": [
+                {
+                    "from": 0,
+                    "to": 2.3,
+                    "layerTitle": "Fill Material",
+                    "layerSymbol": "FL",
+                    "timestamp": 34
+                },
+                {
+                    "from": 2.3,
+                    "to": 7.8,
+                    "layerTitle": "Silty Sand",
+                    "layerSymbol": "SM",
+                    "timestamp": 35
+                },
+                {
+                    "from": 7.8,
+                    "to": 20,
+                    "layerTitle": "Till",
+                    "layerSymbol": "TILL",
+                    "timestamp": 36
+                }
+            ],
+            "ally": [
+                {
+                    "timestamp": 37,
+                    "y": 0,
+                    "x": 50.1,
+                    "bhname": "BH-5",
+                    "left": true,
+                    "yz": 28.6,
+                    "xx": 49.35,
+                    "correct_yz": 28.6
+                },
+                {
+                    "timestamp": 38,
+                    "y": 0,
+                    "x": 50.1,
+                    "bhname": "BH-5",
+                    "yz": 28.6,
+                    "xx": 50.85,
+                    "correct_yz": 28.6
+                },
+                {
+                    "timestamp": 39,
+                    "y": 2.3,
+                    "x": 50.1,
+                    "bhname": "BH-5",
+                    "left": true,
+                    "yz": 26.3,
+                    "xx": 49.35,
+                    "correct_yz": 26.3
+                },
+                {
+                    "timestamp": 40,
+                    "y": 2.3,
+                    "x": 50.1,
+                    "bhname": "BH-5",
+                    "yz": 26.3,
+                    "xx": 50.85,
+                    "correct_yz": 26.3
+                },
+                {
+                    "timestamp": 41,
+                    "y": 7.8,
+                    "x": 50.1,
+                    "bhname": "BH-5",
+                    "left": true,
+                    "yz": 20.8,
+                    "xx": 49.35,
+                    "correct_yz": 20.8
+                },
+                {
+                    "timestamp": 42,
+                    "y": 7.8,
+                    "x": 50.1,
+                    "bhname": "BH-5",
+                    "yz": 20.8,
+                    "xx": 50.85,
+                    "correct_yz": 20.8
+                },
+                {
+                    "timestamp": 43,
+                    "y": 20,
+                    "x": 50.1,
+                    "bhname": "BH-5",
+                    "left": true,
+                    "yz": 8.600000000000001,
+                    "xx": 49.35,
+                    "correct_yz": 8.600000000000001
+                },
+                {
+                    "timestamp": 44,
+                    "y": 20,
+                    "x": 50.1,
+                    "bhname": "BH-5",
+                    "yz": 8.600000000000001,
+                    "xx": 50.85,
+                    "correct_yz": 8.600000000000001
+                }
+            ],
+            "waterPoint": {
+                "timestamp": 45,
+                "bhname": "BH-5",
+                "x": 50.1,
+                "y": -9999,
+                "xx": 50.09999999999939,
+                "yz": -9970.4,
+                "textHidden": true,
+                "correct_yz": 10027.6
+            }
+        }
+    ],
+    "LINKS": [],
+    "POLYGONS": [
+        {
+            "poly": true,
+            "timestamp": 54,
+            "points": [
+                {
+                    "timestamp": 26,
+                    "y": 2.1,
+                    "x": 33.3,
+                    "bhname": "BH-2",
+                    "yz": 22.031903718674364,
+                    "xx": 34.41466117310055,
+                    "correct_yz": 22.031903718674364
+                },
+                {
+                    "timestamp": 39,
+                    "y": 2.3,
+                    "x": 50.1,
+                    "bhname": "BH-5",
+                    "left": true,
+                    "yz": 26.3,
+                    "xx": 49.35,
+                    "correct_yz": 26.3
+                },
+                {
+                    "timestamp": 41,
+                    "y": 7.8,
+                    "x": 50.1,
+                    "bhname": "BH-5",
+                    "left": true,
+                    "yz": 20.8,
+                    "xx": 49.35,
+                    "correct_yz": 20.8
+                },
+                {
+                    "timestamp": 28,
+                    "y": 4.5,
+                    "x": 33.3,
+                    "bhname": "BH-2",
+                    "yz": 19.668365111445066,
+                    "xx": 34.831416799501184,
+                    "correct_yz": 19.668365111445066
+                }
+            ],
+            "f": "url(#Hatch_Files/PNG/Soil/Black/SM.png)",
+            "fsrc": "Hatch_Files/PNG/Soil/Black/SM.png"
+        },
+        {
+            "poly": true,
+            "timestamp": 89,
+            "points": [
+                {
+                    "timestamp": 37,
+                    "y": 0,
+                    "x": 50.1,
+                    "bhname": "BH-5",
+                    "left": true,
+                    "yz": 28.6,
+                    "xx": 49.35,
+                    "correct_yz": 28.6
+                },
+                {
+                    "timestamp": 24,
+                    "y": 0,
+                    "x": 33.3,
+                    "bhname": "BH-2",
+                    "yz": 24.1,
+                    "xx": 34.05,
+                    "correct_yz": 24.1
+                },
+                {
+                    "timestamp": 26,
+                    "y": 2.1,
+                    "x": 33.3,
+                    "bhname": "BH-2",
+                    "yz": 22.031903718674364,
+                    "xx": 34.41466117310055,
+                    "correct_yz": 22.031903718674364
+                },
+                {
+                    "timestamp": 39,
+                    "y": 2.3,
+                    "x": 50.1,
+                    "bhname": "BH-5",
+                    "left": true,
+                    "yz": 26.3,
+                    "xx": 49.35,
+                    "correct_yz": 26.3
+                }
+            ],
+            "f": "url(#Hatch_Files/PNG/Soil/Black/FL.png)",
+            "fsrc": "Hatch_Files/PNG/Soil/Black/FL.png"
+        },
+        {
+            "poly": true,
+            "timestamp": 100,
+            "points": [
+                {
+                    "timestamp": 29,
+                    "y": 5,
+                    "x": 33.3,
+                    "bhname": "BH-2",
+                    "left": true,
+                    "yz": 19.17596123493896,
+                    "xx": 33.41824088833465,
+                    "correct_yz": 19.17596123493896
+                },
+                {
+                    "timestamp": 15,
+                    "y": 9.75,
+                    "x": 13.8,
+                    "bhname": "BH-1",
+                    "yz": 16.75,
+                    "xx": 14.55,
+                    "correct_yz": 16.75
+                },
+                {
+                    "timestamp": 17,
+                    "y": 15,
+                    "x": 13.8,
+                    "bhname": "BH-1",
+                    "yz": 11.5,
+                    "xx": 14.550000000000002,
+                    "correct_yz": 11.5
+                },
+                {
+                    "timestamp": 31,
+                    "y": 11.5,
+                    "x": 33.3,
+                    "bhname": "BH-2",
+                    "left": true,
+                    "yz": 12.774710840359608,
+                    "xx": 34.5469540431697,
+                    "correct_yz": 12.774710840359608
+                }
+            ],
+            "f": "url(#Hatch_Files/PNG/Soil/Black/TILL.png)",
+            "fsrc": "Hatch_Files/PNG/Soil/Black/TILL.png"
+        },
+        {
+            "poly": true,
+            "timestamp": 115,
+            "points": [
+                {
+                    "timestamp": 43,
+                    "y": 20,
+                    "x": 50.1,
+                    "bhname": "BH-5",
+                    "left": true,
+                    "yz": 8.600000000000001,
+                    "xx": 49.35,
+                    "correct_yz": 8.600000000000001
+                },
+                {
+                    "timestamp": 41,
+                    "y": 7.8,
+                    "x": 50.1,
+                    "bhname": "BH-5",
+                    "left": true,
+                    "yz": 20.8,
+                    "xx": 49.35,
+                    "correct_yz": 20.8
+                },
+                {
+                    "timestamp": 30,
+                    "y": 5,
+                    "x": 33.3,
+                    "bhname": "BH-2",
+                    "yz": 19.17596123493896,
+                    "xx": 34.91824088833465,
+                    "correct_yz": 19.17596123493896
+                },
+                {
+                    "timestamp": 32,
+                    "y": 11.5,
+                    "x": 33.3,
+                    "bhname": "BH-2",
+                    "yz": 12.774710840359608,
+                    "xx": 36.0469540431697,
+                    "correct_yz": 12.774710840359608
+                },
+                {
+                    "timestamp": 107,
+                    "x": 41.24272918701173,
+                    "yz": 11.845334370930987,
+                    "correct_yz": 11.845334370930987,
+                    "iamextrapoint": true,
+                    "y": -11.845334370930987
+                },
+                {
+                    "timestamp": 109,
+                    "x": 36.703076680501304,
+                    "yz": 9.847503026326498,
+                    "correct_yz": 9.847503026326498,
+                    "iamextrapoint": true,
+                    "y": -9.847503026326498
+                },
+                {
+                    "timestamp": 111,
+                    "x": 42.111531575520836,
+                    "yz": 10.469715118408203,
+                    "correct_yz": 10.469715118408203,
+                    "iamextrapoint": true,
+                    "y": -10.469715118408203
+                },
+                {
+                    "timestamp": 113,
+                    "x": 36.767824808756494,
+                    "yz": 7.499455769856776,
+                    "correct_yz": 7.499455769856776,
+                    "iamextrapoint": true,
+                    "y": -7.499455769856776
+                }
+            ],
+            "f": "url(#Hatch_Files/PNG/Soil/Black/TILL.png)",
+            "fsrc": "Hatch_Files/PNG/Soil/Black/TILL.png"
+        },
+        {
+            "poly": true,
+            "timestamp": 125,
+            "points": [
+                {
+                    "timestamp": 13,
+                    "y": 3.1,
+                    "x": 13.8,
+                    "bhname": "BH-1",
+                    "yz": 23.4,
+                    "xx": 14.55,
+                    "correct_yz": 23.4
+                },
+                {
+                    "timestamp": 27,
+                    "y": 4.5,
+                    "x": 33.3,
+                    "bhname": "BH-2",
+                    "left": true,
+                    "yz": 19.668365111445066,
+                    "xx": 33.331416799501184,
+                    "correct_yz": 19.668365111445066
+                },
+                {
+                    "timestamp": 29,
+                    "y": 5,
+                    "x": 33.3,
+                    "bhname": "BH-2",
+                    "left": true,
+                    "yz": 19.17596123493896,
+                    "xx": 33.41824088833465,
+                    "correct_yz": 19.17596123493896
+                },
+                {
+                    "timestamp": 15,
+                    "y": 9.75,
+                    "x": 13.8,
+                    "bhname": "BH-1",
+                    "yz": 16.75,
+                    "xx": 14.55,
+                    "correct_yz": 16.75
+                },
+                {
+                    "timestamp": 13,
+                    "y": 3.1,
+                    "x": 13.8,
+                    "bhname": "BH-1",
+                    "yz": 23.4,
+                    "xx": 14.55,
+                    "correct_yz": 23.4
+                }
+            ]
+        }
+    ],
+    "EPOINTS": [
+        {
+            "timestamp": 46,
+            "x": 35.449999491373696,
+            "yz": 28.027084350585938,
+            "iamextrapoint": true,
+            "correct_yz": 28.027084350585938,
+            "y": -28.027084350585938
+        },
+        {
+            "timestamp": 57,
+            "x": 45.63865661621094,
+            "yz": 44.87549336751302,
+            "iamextrapoint": true,
+            "correct_yz": 44.87549336751302,
+            "y": -44.87549336751302
+        },
+        {
+            "timestamp": 59,
+            "x": 41.33103688557943,
+            "yz": 39.8978017171224,
+            "iamextrapoint": true,
+            "correct_yz": 39.8978017171224,
+            "y": -39.8978017171224
+        },
+        {
+            "timestamp": 61,
+            "x": 46.02155558268229,
+            "yz": 40.80718739827474,
+            "iamextrapoint": true,
+            "correct_yz": 40.80718739827474,
+            "y": -40.80718739827474
+        },
+        {
+            "timestamp": 63,
+            "x": 44.2027842203776,
+            "yz": 38.55765279134115,
+            "iamextrapoint": true,
+            "correct_yz": 38.55765279134115,
+            "y": -38.55765279134115
+        },
+        {
+            "timestamp": 65,
+            "x": 46.73949178059896,
+            "yz": 37.98330434163412,
+            "iamextrapoint": true,
+            "correct_yz": 37.98330434163412,
+            "y": -37.98330434163412
+        },
+        {
+            "timestamp": 72,
+            "x": 57.6617202758789,
+            "yz": 2.542902628580728,
+            "correct_yz": 2.542902628580728,
+            "iamextrapoint": true,
+            "y": -2.542902628580728
+        },
+        {
+            "timestamp": 107,
+            "x": 41.24272918701173,
+            "yz": 11.845334370930987,
+            "correct_yz": 11.845334370930987,
+            "iamextrapoint": true,
+            "y": -11.845334370930987
+        },
+        {
+            "timestamp": 109,
+            "x": 36.703076680501304,
+            "yz": 9.847503026326498,
+            "correct_yz": 9.847503026326498,
+            "iamextrapoint": true,
+            "y": -9.847503026326498
+        },
+        {
+            "timestamp": 111,
+            "x": 42.111531575520836,
+            "yz": 10.469715118408203,
+            "correct_yz": 10.469715118408203,
+            "iamextrapoint": true,
+            "y": -10.469715118408203
+        },
+        {
+            "timestamp": 113,
+            "x": 36.767824808756494,
+            "yz": 7.499455769856776,
+            "correct_yz": 7.499455769856776,
+            "iamextrapoint": true,
+            "y": -7.499455769856776
+        }
+    ],
+    "boreholeWidth": "600",
+    "horScaleFt": "64",
+    "vertScaleFt": "64",
+    "REGCX": 27.423515928168484,
+    "REGCY": -17.66799959941889,
+    "textSize": "11",
+    "LEGDX": 20,
+    "LEGDY": -5,
+    "fillUsedForLegend": [
+        {
+            "src": "Hatch_Files/PNG/Soil/Red/FL.png"
+        },
+        {
+            "src": "Hatch_Files/PNG/Soil/Green/SM.png"
+        },
+        {
+            "src": "Hatch_Files/PNG/Soil/Black/GW.png"
+        },
+        {
+            "src": "Hatch_Files/PNG/Soil/Black/TILL.png"
+        }
+    ]
+}

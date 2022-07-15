@@ -1,0 +1,822 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cross Section Designer v 2.0</title>
+
+  <!-- INCLUDE THIS START -->
+  <script src="lib/d3.v4.min.js"></script>
+  <script src="lib/changeDPI.js"></script>
+  <script src="lib/jquery-3.6.0.js"></script>
+
+  <script src="lib/bootstrap-4.0.0/dist/js/bootstrap.bundle.js"></script>
+  <link rel="stylesheet" href="lib/bootstrap-4.0.0/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="lib/fontawesome-free-5.15.4-web/css/all.min.css">
+
+  <script src="./dxf_bundle.js"></script>
+  <script src="./dxf-json-script.js"></script>
+  <script src="./hatchDxf.min.js"></script>
+  
+  <link href="lib/spectrum/spectrum.css" rel="stylesheet" type="text/css" />
+  <link href="lib/jqPropertyGrid/jqPropertyGrid.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="sharedModalPropertyGrid.css">
+  <link rel="stylesheet" href="index.css">
+  <!-- INCLUDE THIS END -->
+
+</head>
+
+<body>
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#FinceDiagramModal">
+  Launch demo modal
+</button>
+
+<!-- Modal copied from the bootstrap site -->
+<!-- <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div id="rootElem1" class="rootElem"></div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div> -->
+
+<!-- Modal copied from the ilog site and lightly modified-->
+<div id="FinceDiagramContainer" class="modalAppContainer">
+    <style>
+        .loader-text {
+            white-space: nowrap;
+            position: absolute;
+            z-index: 99999999999;
+            font-weight: 600;
+            padding: 6px;
+            top: 45%;
+            color: #4bda23;
+            font-size: 24px;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            text-align: center;
+            margin-top: 55px;
+        }
+
+        .hidden {
+            visibility: hidden;
+        }
+
+        .loader {
+            top: 45%;
+            margin-top: 0;
+            width: 60px;
+            height: 60px;
+            left: 0;
+            margin: 0 auto;
+            text-align: center;
+            right: 0;
+        }
+
+        .irs--flat .irs-handle>i:first-child {
+            background-color: #007bff;
+        }
+
+        .irs--flat .irs-handle {
+            height: 10px;
+        }
+
+        .irs--flat .irs-line {
+            height: 4px;
+        }
+
+        .irs--flat .irs-from,
+        .irs--flat .irs-to,
+        .irs--flat .irs-single {
+            background-color: #007bff;
+        }
+
+        .irs--flat .irs-bar {
+            height: 4px;
+            background-color: #007bff;
+        }
+
+        .modal-xl {
+            max-width: 97%;
+            margin-left: 1.5%;
+        }
+
+        .modal-body {
+            max-height: calc(100vh - 200px);
+            overflow-y: hidden;
+        }
+
+        .appModal > .modal-dialog > .modal-content > .modal-body {
+            padding: 0px;
+        }
+
+        .appModal > .modal-dialog > .modal-content > .modal-body>div {
+            margin: auto;
+        }
+
+        .appModal > .modal-dialog > .modal-content > .modal-body::-webkit-scrollbar {
+            display: none;
+        }
+
+        .appModal > .modal-dialog > .modal-content > .modal-body::-webkit-scrollbar-button {
+            display: none;
+        }
+
+        .appModal > .modal-dialog > .modal-content > .modal-body::-webkit-scrollbar-track {
+            display: none;
+        }
+
+        .appModal > .modal-dialog > .modal-content > .modal-body::-webkit-scrollbar-track-piece {
+            display: none;
+        }
+
+        .appModal > .modal-dialog > .modal-content > .modal-body::-webkit-scrollbar-thumb {
+            display: none;
+        }
+
+        .appModal > .modal-dialog > .modal-content > .modal-body::-webkit-scrollbar-corner {
+            display: none;
+        }
+
+        .appModal > .modal-dialog > .modal-content > .modal-body::-webkit-resizer {
+            display: none;
+        }
+    </style>
+    <style>
+        /* .axTop, .axLeft {
+            visibility: hidden;
+        } */
+
+
+
+        .pointer {
+            width: 28px;
+            display: inline-block;
+            margin-right: 0;
+        }
+
+        .pointer img {
+            max-width: 100%;
+        }
+    </style>
+    <style id="contextMenuCss">
+        .context-menu-input.input-color-hatch {
+            padding-left: 25px !important;
+        }
+
+        .rename span {
+            display: none;
+        }
+
+        .transparency span {
+            display: inline-block;
+            position: absolute;
+            right: 30px;
+            left: 38px;
+        }
+
+        .transparency input {
+            width: 40px !important;
+        }
+
+        .rename input[type='text'] {
+            border: 0;
+            outline: none;
+        }
+
+        .rename input[type='text']::-webkit-input-placeholder {
+            /* Edge */
+            color: #2f2f2f;
+        }
+
+        .rename input[type='text']:-ms-input-placeholder {
+            /* Internet Explorer 10-11 */
+            color: #2f2f2f;
+        }
+
+        .rename input[type='text']::placeholder {
+            color: #2f2f2f;
+        }
+
+
+        .context-menu-input.context-menu-hover {
+            color: #ffffff;
+        }
+
+        .context-menu-list .context-menu-list .context-menu-list {
+            max-height: 550px;
+            overflow-y: auto;
+        }
+
+        .context-menu-icon {
+            min-height: 18px;
+            background-repeat: no-repeat;
+            background-position: 8px 0px;
+            background-size: 25px;
+        }
+
+        .context-menu-hatch-color .context-menu-icon:before {
+            content: "";
+            width: 20px;
+            height: 20px;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+        }
+
+        .context-menu-hatch-color ul {
+            width: 60px !important;
+            min-width: 60px !important;
+        }
+
+        .context-menu-hatch-color ul li {
+            float: left;
+            width: 19px;
+        }
+
+        .context-menu-hatch-color ul li {
+            padding: 5px;
+            margin-bottom: 5px;
+        }
+
+        .context-menu-hatch-color ul span {
+            display: none;
+        }
+
+        .context-menu-hatch-color .context-menu-icon-black:before {
+            background-color: black;
+        }
+
+        .context-menu-hatch-color .context-menu-icon-white:before {
+            background-color: white;
+            border: 1px solid black;
+        }
+
+        .context-menu-hatch-color .context-menu-icon-red:before {
+            background-color: red;
+        }
+
+        .context-menu-hatch-color .context-menu-icon-lime:before {
+            background-color: lime;
+        }
+
+        .context-menu-hatch-color .context-menu-icon-blue:before {
+            background-color: blue;
+        }
+
+        .context-menu-hatch-color .context-menu-icon-yellow:before {
+            background-color: yellow;
+        }
+
+        .context-menu-hatch-color .context-menu-icon-cyan:before {
+            background-color: cyan;
+        }
+
+        .context-menu-hatch-color .context-menu-icon-magenta:before {
+            background-color: magenta;
+        }
+
+        .context-menu-hatch-color .context-menu-icon-brown:before {
+            background-color: brown;
+        }
+
+        .context-menu-hatch-color .context-menu-icon-green:before {
+            background-color: green;
+        }
+
+        .context-menu-hatch-color .context-menu-icon-maroon:before {
+            background-color: maroon;
+        }
+
+        .context-menu-polygon .context-menu-icon-sh {
+            background-image: url(/Toolbar_Icons/SelectHatch.png);
+        }
+
+        .context-menu-icon-color {
+            background-image: url(/Toolbar_Icons/ColorPallet.png);
+        }
+
+        .context-menu-icon-rh {
+            background-image: url(/Toolbar_Icons/Erase.png);
+        }
+
+        .context-menu-icon-dl {
+            background-image: url(/Toolbar_Icons/Delete.png);
+        }
+
+        .context-menu-icon-layer-text {
+            background-image: url(/Toolbar_Icons/LayerText.png);
+            background-position: 8px 2px;
+        }
+
+        .context-menu-icon-transparency-text {
+            background-image: url(/Toolbar_Icons/LayerText.png);
+            background-position: 10px 3px;
+            padding-left: 140px !important;
+        }
+
+        .context-menu-input.input-color,
+        .context-menu-icon-layer-text {
+            padding-left: 38px !important;
+        }
+
+        .context-menu-icon>span {
+            padding-left: 10px;
+        }
+
+        .isUnitFT,
+        .isUnitM {
+            display: none;
+        }
+
+        .context-menu-icon-TS {
+            background-image: url(/ContextMenuSoil/TS.png)
+        }
+
+        .context-menu-icon-TILL {
+            background-image: url(/ContextMenuSoil/TILL.png)
+        }
+
+        .context-menu-icon-SW-SM {
+            background-image: url(/ContextMenuSoil/SW-SM.png)
+        }
+
+        .context-menu-icon-SW-SC {
+            background-image: url(/ContextMenuSoil/SW-SC.png)
+        }
+
+        .context-menu-icon-SW {
+            background-image: url(/ContextMenuSoil/SW.png)
+        }
+
+        .context-menu-icon-SP-SM {
+            background-image: url(/ContextMenuSoil/SP-SM.png)
+        }
+
+        .context-menu-icon-SP-SC {
+            background-image: url(/ContextMenuSoil/SP-SC.png)
+        }
+
+        .context-menu-icon-SP {
+            background-image: url(/ContextMenuSoil/SP.png)
+        }
+
+        .context-menu-icon-SM {
+            background-image: url(/ContextMenuSoil/SM.png)
+        }
+
+        .context-menu-icon-SC-SM {
+            background-image: url(/ContextMenuSoil/SC-SM.png)
+        }
+
+        .context-menu-icon-SC {
+            background-image: url(/ContextMenuSoil/SC.png)
+        }
+
+        .context-menu-icon-PEAT {
+            background-image: url(/ContextMenuSoil/PEAT.png)
+        }
+
+        .context-menu-icon-OL {
+            background-image: url(/ContextMenuSoil/OL.png)
+        }
+
+        .context-menu-icon-OH {
+            background-image: url(/ContextMenuSoil/OH.png)
+        }
+
+        .context-menu-icon-ML {
+            background-image: url(/ContextMenuSoil/ML.png)
+        }
+
+        .context-menu-icon-MH {
+            background-image: url(/ContextMenuSoil/MH.png)
+        }
+
+        .context-menu-icon-GW-GM {
+            background-image: url(/ContextMenuSoil/GW-GM.png)
+        }
+
+        .context-menu-icon-GW-GC {
+            background-image: url(/ContextMenuSoil/GW-GC.png)
+        }
+
+        .context-menu-icon-GW {
+            background-image: url(/ContextMenuSoil/GW.png)
+        }
+
+        .context-menu-icon-GP-GC {
+            background-image: url(/ContextMenuSoil/GP-GC.png)
+        }
+
+        .context-menu-icon-GP-GM {
+            background-image: url(/ContextMenuSoil/GP-GM.png)
+        }
+
+        .context-menu-icon-GP {
+            background-image: url(/ContextMenuSoil/GP.png)
+        }
+
+        .context-menu-icon-GM {
+            background-image: url(/ContextMenuSoil/GM.png)
+        }
+
+        .context-menu-icon-GC-GM {
+            background-image: url(/ContextMenuSoil/GC-GM.png)
+        }
+
+        .context-menu-icon-GC {
+            background-image: url(/ContextMenuSoil/GC.png)
+        }
+
+        .context-menu-icon-FL {
+            background-image: url(/ContextMenuSoil/FL.png)
+        }
+
+        .context-menu-icon-CL-ML {
+            background-image: url(/ContextMenuSoil/CL-ML.png)
+        }
+
+        .context-menu-icon-CL {
+            background-image: url(/ContextMenuSoil/CL.png)
+        }
+
+        .context-menu-icon-CH {
+            background-image: url(/ContextMenuSoil/CH.png)
+        }
+
+        .context-menu-icon-Zeolitic_Rock {
+            background-image: url(/ContextMenuSoil/Zeolitic_Rock.png)
+        }
+
+        .context-menu-icon-Tuff {
+            background-image: url(/ContextMenuSoil/Tuff.png)
+        }
+
+        .context-menu-icon-Soapstone {
+            background-image: url(/ContextMenuSoil/Soapstone.png)
+        }
+
+        .context-menu-icon-Slate {
+            background-image: url(/ContextMenuSoil/Slate.png)
+        }
+
+        .context-menu-icon-Siltstone {
+            background-image: url(/ContextMenuSoil/Siltstone.png)
+        }
+
+        .context-menu-icon-Shale {
+            background-image: url(/ContextMenuSoil/Shale.png)
+        }
+
+        .context-menu-icon-Serpentine {
+            background-image: url(/ContextMenuSoil/Serpentine.png)
+        }
+
+        .context-menu-icon-Schist {
+            background-image: url(/ContextMenuSoil/Schist.png)
+        }
+
+        .context-menu-icon-Sandstone {
+            background-image: url(/ContextMenuSoil/Sandstone.png)
+        }
+
+        .context-menu-icon-Salt {
+            background-image: url(/ContextMenuSoil/Salt.png)
+        }
+
+        .context-menu-icon-Rock_Salt {
+            background-image: url(/ContextMenuSoil/Rock_Salt.png)
+        }
+
+        .context-menu-icon-Quartzite {
+            background-image: url(/ContextMenuSoil/Quartzite.png)
+        }
+
+        .context-menu-icon-Quartz {
+            background-image: url(/ContextMenuSoil/Quartz.png)
+        }
+
+        .context-menu-icon-Porphyritic_Rock {
+            background-image: url(/ContextMenuSoil/Porphyritic_Rock.png)
+        }
+
+        .context-menu-icon-Oil_Shale {
+            background-image: url(/ContextMenuSoil/Oil_Shale.png)
+        }
+
+        .context-menu-icon-Mudstone {
+            background-image: url(/ContextMenuSoil/Mudstone.png)
+        }
+
+        .context-menu-icon-Marble {
+            background-image: url(/ContextMenuSoil/Marble.png)
+        }
+
+        .context-menu-icon-Loess {
+            background-image: url(/ContextMenuSoil/Loess.png)
+        }
+
+        .context-menu-icon-Limestone {
+            background-image: url(/ContextMenuSoil/Limestone.png)
+        }
+
+        .context-menu-icon-Igneous_Rock2 {
+            background-image: url(/ContextMenuSoil/Igneous_Rock2.png)
+        }
+
+        .context-menu-icon-Igneous_Rock {
+            background-image: url(/ContextMenuSoil/Igneous_Rock.png)
+        }
+
+        .context-menu-icon-Gypsum {
+            background-image: url(/ContextMenuSoil/Gypsum.png)
+        }
+
+        .context-menu-icon-Gravel_Conglomerate2 {
+            background-image: url(/ContextMenuSoil/Gravel_Conglomerate2.png)
+        }
+
+        .context-menu-icon-Gravel_Conglomerate1 {
+            background-image: url(/ContextMenuSoil/Gravel_Conglomerate1.png)
+        }
+
+        .context-menu-icon-Granite {
+            background-image: url(/ContextMenuSoil/Granite.png)
+        }
+
+        .context-menu-icon-Gneiss {
+            background-image: url(/ContextMenuSoil/Gneiss.png)
+        }
+
+        .context-menu-icon-Fossiliferous {
+            background-image: url(/ContextMenuSoil/Fossiliferous.png)
+        }
+
+        .context-menu-icon-Dolomite {
+            background-image: url(/ContextMenuSoil/Dolomite.png)
+        }
+
+        .context-menu-icon-Diamicton {
+            background-image: url(/ContextMenuSoil/Diamicton.png)
+        }
+
+        .context-menu-icon-Conglomerate {
+            background-image: url(/ContextMenuSoil/Conglomerate.png)
+        }
+
+        .context-menu-icon-Coal {
+            background-image: url(/ContextMenuSoil/Coal.png)
+        }
+
+        .context-menu-icon-Clay_ClayShale {
+            background-image: url(/ContextMenuSoil/Clay_ClayShale.png)
+        }
+
+        .context-menu-icon-Chalk {
+            background-image: url(/ContextMenuSoil/Chalk.png)
+        }
+
+        .context-menu-icon-Breccia {
+            background-image: url(/ContextMenuSoil/Breccia.png)
+        }
+
+        .context-menu-icon-Bentonite_Rock {
+            background-image: url(/ContextMenuSoil/Bentonite_Rock.png)
+        }
+
+        .context-menu-icon-Basaltic_Flows {
+            background-image: url(/ContextMenuSoil/Basaltic_Flows.png)
+        }
+
+        .context-menu-icon-Argillaceous {
+            background-image: url(/ContextMenuSoil/Argillaceous.png)
+        }
+
+        .context-menu-icon-Anhydrite {
+            background-image: url(/ContextMenuSoil/Anhydrite.png)
+        }
+
+        .context-menu-icon-Earth {
+            background-image: url(/ContextMenuSoil/Earth.png)
+        }
+
+        .context-menu-icon-Concrete {
+            background-image: url(/ContextMenuSoil/Concrete.png)
+        }
+
+        .context-menu-icon-Bentonite {
+            background-image: url(/ContextMenuSoil/Bentonite.png)
+        }
+
+        .context-menu-icon-Coal {
+            background-image: url(/ContextMenuSoil/Coal.png)
+        }
+    </style>
+    <style id="toggleBox">
+        .left-panel {
+            width: 300px;
+            padding-right: 15px;
+            float: left;
+            display: none;
+        }
+
+        .left-panel:before {
+            content: "";
+            height: 100%;
+            width: 3px;
+            background-color: #ddd;
+            position: absolute;
+            top: 0;
+            left: 312px;
+        }
+
+        .right-panel {
+            overflow: hidden;
+            position: relative;
+        }
+
+        .toolbar-panel {
+            margin-left: 20px;
+        }
+
+        #gridon,
+        #bhFile {
+            display: none;
+        }
+
+        .appModal > .modal-dialog > .modal-content > .modal-body {
+            min-height: calc(100vh - 200px);
+            height: 100%;
+        }
+
+        .appModal > .modal-dialog {
+            margin-bottom: 0;
+        }
+
+        .appModal > .modal-dialog > .modal-content > .modal-footer {
+            /* display: inline-block; */
+            width: 100%;
+        }
+
+        .min-height {
+            min-height: calc(100vh - 240px);
+        }
+
+        @media only screen and (min-width: 992px) and (max-width: 1024px) {
+
+            /* For portrait layouts only */
+            .modal-lg,
+            .modal-xl {
+                max-width: 1000px !important;
+            }
+        }
+
+        /*    @media (min-width: 992px) {
+            .modal-lg, .modal-xl {
+                max-width: 1000px !important;
+            }
+        }*/
+    </style>
+    <style id="FiledTestPlotModalCSS">
+        @media (min-width: 992px) {
+
+            #Modal_7314961640224798691Container .modal-lg,
+            .field-test-plot-modal-container .modal-xl {
+                max-width: 615px;
+            }
+        }
+    </style>
+  
+  <!-- <div class="modal-backdrop fade"></div> -->
+  <div class="modal fade appModal" tabindex="-1" role="dialog" id="FinceDiagramModal" data-keyboard="false" aria-modal="true">
+      <div class="modal-dialog modal-xl" role="document">
+          <div class="modal-content">
+  
+      <div class="modal-header   pd-y-5 pb-0 pd-x-20 pd-sm-x-30">
+          <div class="media align-items-center" style=" display: contents;">
+              <div class="media-body mg-sm-l-20">
+                  <div class="row">
+                      <div class="col-3 align-self-center">
+                          <h4 class="appName tx-18 tx-sm-20 mg-b-2" style="margin-bottom:0px;">  Cross Section Designer</h4>
+                      </div>
+                      <div class="col-6 text-center mb-0 reportTitleCol">
+                          <h3 id="charttitle" class="mb-0">Section A</h3>
+                      </div>
+                      <div class="col-3 headerButtons">
+                        <div class="row">
+                            <div class="col-sm">
+                                <div class="headerButton helpButton">
+                                    <span class="headerIcon helpIcon"></span>
+                                    <div><a target="_blank" href="https://www.rocscience.com/help/rslog/documentation/data-entry-design/cross-section/cross-section-designer">Help</a></div>
+                                </div>
+                            </div>
+                            <div class="col-sm">
+                                <div class="headerButton videoButton">
+                                    <span class="headerIcon videoIcon"></span>
+                                    <div><a href="#">Video</a></div>
+                                </div>
+                            </div>
+                            <div class="col-sm">
+                                <a href="" role="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">×</span>
+                                </a>
+                            </div>
+                        </div>
+                      </div>
+  
+                  </div>
+              </div>
+          </div>
+      </div>
+      <div class="modal-body">
+        <div id="rootElem1" class="rootElem" tabIndex="-1"></div>
+      </div>
+      <div class="modal-footer justify-content-center"">
+          <div class="row">
+            <div class="col text-center">
+                <button type="button" id="saveBtn" onclick="save()" class="btn btn-sm btn-outline-primary"><i class="fa fa-check"></i>  Save  </button>
+                <button type="button" id="cancleBtn" class="btn btn-sm btn-outline-primary" data-dismiss="modal"><i class="fa fa-close"></i>  Cancel  </button>
+            </div>
+          </div>
+      </div>
+          </div>
+      </div>
+      <div id="right_click_menu" class="right-click-menu">
+        <div class="right-menu-item">
+            <label>latitude</label>
+            <input id="site_lat" type="text">
+        </div>
+        <div class="right-menu-item">
+            <label>longitude</label>
+            <input id="site_lng" type="text">
+        </div>
+        <div class="right-menu-item">
+            <label>radius</label>
+            <input id="site_rad" type="text"></div>
+        <div class="right-menu-item">
+            <label>Resolution</label>
+            <select id="site_zoom">
+                <option value="11">Very Low</option>
+                <option value="13">Low</option>
+                <option value="15" selected>Medium</option>
+                <option value="16">High</option>
+                <option value="17">Very High</option>
+            </select></div>
+        <div class="right-menu-item">
+            <label>terrain</label>
+            <select id="site_terrain">
+                <option value="Satellite" selected>Satellite</option>
+                <option value="Wireframe">Wireframe</option>
+                <option value="Contours">Contours</option>
+            </select>
+        </div>
+        <div class="right-menu-item align-right">
+            <button id="menu_submit_btn">update</button>
+        </div>
+        <div class="right-menu-item">
+            <label>axis helper</label>
+            <input id="axis_helper_on" type="checkbox">
+        </div>
+        <div>
+
+            <button id="menu_delete_btn">delete</button>
+            <button id="menu_close_btn">close</button>
+        </div>
+    </div>
+  </div>
+  </div>
+    
+  <!-- INCLUDE THIS START -->
+  <script type="module" src="terrain.js"></script>
+  <script type="module" src="map.js"></script>
+  <script type="module" src="3dModal.js"></script>
+  
+  <script src="./map-terrain.min.js"></script>
+
+  <script src="lib/spectrum/spectrum.js"></script>
+  <script src="./lib/jqPropertyGrid/jqPropertyGrid.js"></script>
+  <script type="module" src="./lib/3D_Viewer_conversion/viewerJqueryPlugin.js"></script>
+
+  <script src="hatchFilesDict.js"></script>
+  <script src="CrossSectionCanvas.js"></script>
+  <script src="Example_with_no_page_settings_UI.js" defer></script>
+  <!-- INCLUDE THIS END -->
+</body>
+
+</html>

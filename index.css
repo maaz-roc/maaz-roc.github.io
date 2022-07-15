@@ -1,0 +1,881 @@
+body {
+font-family: Arial, sans-serif;
+}
+
+/* allows calculating the size of elements with the modal closed
+the closed modal uses display: none; */
+.appModal {
+    visibility: hidden;
+    display: unset;
+}
+.appModal.show {
+    visibility: visible;
+}
+
+.canvasCol {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+.disabledarea {
+pointer-events: none;
+opacity: 0.4;
+}
+
+.wrapper {
+position: absolute;
+}
+
+.windowContainer {
+position: relative;
+width: fit-content;
+}
+
+.svgFullscreen {
+border: 2px solid orange;
+}
+
+/*
+rect:not(.axis) {
+    position: absolute;
+    stroke: blue;
+}
+*/
+rect.bhpoint, rect.freepoint {
+fill: var(--pointFillColor);
+stroke: var(--pointLineColor);
+fill-opacity: var(--pointFillOpacity);
+}
+
+.inviz {
+visibility: hidden;
+/* display: none; */
+}
+
+.invisible {
+    visibility: hidden !important;
+    display: none !important;
+}
+
+.opa {
+/*  opacity: 0.2;  */
+fill-opacity: 0.2;
+}
+
+.lopa {
+opacity: 0.3;
+}
+
+.mouselast {
+opacity: 0.6;
+fill-opacity: 0.6;
+stroke: green;
+stroke-width: 3px;
+stroke-dasharray: 6px;
+pointer-events: none;
+}
+
+.mousefirst {
+stroke: green;
+/*    stroke-width: 3px;     */
+stroke-dasharray: 6px;
+pointer-events: none;
+}
+
+.polytooltip {
+position: absolute;
+background-color: lightblue;
+border: 2px solid blue;
+z-index: 100;
+}
+
+.selectHatchTooltip {
+    position: absolute;
+    background-color: #383838;
+    z-index: 99999;
+    left: 250px;
+    width: fit-content;
+    height: fit-content;
+    max-height: 50vh;
+    overflow-x: hidden;
+}
+
+.rootElem {
+    --hatchRepeat: 1;
+    --zoomScale: 1;
+}
+
+.selectHatchTooltip .coloroptions {
+    --fontSize: 8px;
+    height: 100%;
+}
+
+.selectHatchTooltip .coloroptions > div {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-auto-flow: row;
+    height: auto;
+    overflow-y: auto;
+}
+
+.selectHatchTooltip .coloroptions button {
+    background: transparent;
+    display: flex;
+    flex-direction: row;
+    color: #ffffff;
+    align-items: center;
+    height: 60px;
+    border-width: 1px;
+}
+
+.selectHatchTooltip .coloroptions button .hatchImage {
+    width: 48px;
+    height: 48px;
+    display: grid;
+    grid-template-columns: 48px auto;
+    border: 1px solid #E6E6E6;
+    background-repeat-x: repeat;
+    background-repeat-y: repeat;
+    background-size: auto max(min(calc(var(--zoomScale) * var(--hatchRepeat) * 7.5%), 60px), 30px);
+    background-color: transparent;
+}
+
+
+.selectHatchTooltip .coloroptions button .textContainer {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    margin-left: 10px;
+}
+
+.selectHatchTooltip .coloroptions button .hatchText {
+    font-size: 16px;
+    line-height: 16px;
+}
+
+.selectHatchTooltip .coloroptions button .hatchDescription {
+    font-size: 13px;
+    line-height: 13px;
+}
+
+.crossSectionTooltip {
+    position: absolute;
+    visibility: hidden;
+    background-color: lightblue;
+    border: 2px solid blue;
+    z-index: 100;
+}
+
+.texttooltip .tsf,
+.texttooltip .textVisibility,
+.texttooltip .clr0,
+.texttooltip label[for="clr0"] {
+    display: none;
+}
+
+
+.coordinate-tooltip-container {
+        pointer-events: none;
+        border: 1px solid black;
+        /* margin: 2px; */
+        /* float: right; */
+        position: absolute;
+        right: 5px;
+        top: 10px;
+        background-color: whitesmoke;
+}
+.coordinate-tooltip {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: 2px;
+    margin-right: 2px;
+    font-size: 13px;
+}
+
+.zoomContainer {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: left;
+    justify-items: left;
+    width: 70px;
+}
+
+.extrazoom {
+    font-size: 13px;
+    pointer-events: none;
+}
+
+.linktooltip {
+position: absolute;
+background-color: lightblue;
+border: 2px solid blue;
+z-index: 100;
+}
+
+div.coloroptions {
+display: flow-root;
+max-width: 500px;
+}
+
+div.coloroptions img {
+width: 40px;
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+.drawtooltip {
+    font-size: 12px;
+    position: absolute;
+    bottom: 10px;
+    right: 5px;
+    background-color: #fffbe0;
+    opacity: 0.9;
+    padding: 2px;
+    border: 1px solid gray;
+}
+
+.canvasTooltip {
+    opacity: 0.8;
+    color: red;
+    padding: 2px;
+    border-radius: 2px;
+    font-size: 12px;
+    display:flex;
+}
+
+
+.terrainTooltip {
+    top: 5px;
+    left: 58px;
+}
+
+.moveTerrainImage {
+    content: url(Hatch_Files/Toolbar/TerrainMovementImage.png);
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                  Top menu                                  */
+/* -------------------------------------------------------------------------- */
+
+.topmenu {
+    margin-left: 50px;
+}
+
+.helpIcon {
+    content: url(Hatch_Files/Toolbar/icon_help.svg);
+}
+.videoIcon {
+    content: url(Hatch_Files/Toolbar/icon_video.svg);
+}
+
+.AddTextIcon {
+    content: url(Hatch_Files/Toolbar/AddText.png);
+}
+.BackCenterIcon {
+    content: url(Hatch_Files/Toolbar/BackCenter.png);
+}
+.CompanyLogoIcon {
+    content: url(Hatch_Files/Toolbar/CompanyLogo.png);
+}
+.CopyIcon {
+    content: url(Hatch_Files/Toolbar/Copy.png);
+}
+.DatabaseIcon {
+    content: url(Hatch_Files/Toolbar/Database.png);
+}
+.DateIcon {
+    content: url(Hatch_Files/Toolbar/Date.png);
+}
+.DeleteIcon {
+    content: url(Hatch_Files/Toolbar/Delete.png);
+}
+.DownArrowIcon {
+    content: url(Hatch_Files/Toolbar/DownArrow.png);
+}
+.DrawLineIcon {
+    content: url(Hatch_Files/Toolbar/DrawLine.png);
+}
+.DrawPolygonIcon {
+    content: url(Hatch_Files/Toolbar/DrawPolygon.png);
+}
+.EditIcon {
+    content: url(Hatch_Files/Toolbar/Edit.png);
+}
+.ExportIcon {
+    content: url(Hatch_Files/Toolbar/Export.png);
+}
+.GridLinesIcon {
+    content: url(Hatch_Files/Toolbar/GridLines.png);
+}
+.GroundwaterIcon {
+    content: url(Hatch_Files/Toolbar/Groundwater.png);
+}
+.ImportIcon {
+    content: url(Hatch_Files/Toolbar/Import.png);
+}
+.LineIcon {
+    content: url(Hatch_Files/Toolbar/Line.png);
+}
+.OpenIcon {
+    content: url(Hatch_Files/Toolbar/Open.png);
+}
+.OvalCircleIcon {
+    content: url(Hatch_Files/Toolbar/OvalCircle.png);
+}
+.PageNumberIcon {
+    content: url(Hatch_Files/Toolbar/PageNumber.png);
+}
+.PanIcon {
+    content: url(Hatch_Files/Toolbar/Pan.png);
+}
+.CameraIcon {
+    content: url('Hatch_Files/Toolbar/Perspective Camera.png');
+}
+.PlusIcon {
+    content: url(Hatch_Files/Toolbar/Plus.png);
+}
+.PrintIcon {
+    content: url(Hatch_Files/Toolbar/Print.png);
+}
+.QRCodeIcon {
+    content: url(Hatch_Files/Toolbar/QRCode.png);
+}
+.RectangleIcon {
+    content: url(Hatch_Files/Toolbar/Rectangle.png);
+}
+.RedoIcon {
+    content: url(Hatch_Files/Toolbar/Redo.png);
+}
+.ResetToDefaultIcon {
+    content: url(Hatch_Files/Toolbar/ResetToDefault.png);
+}
+.RotateIcon {
+    content: url(Hatch_Files/Toolbar/Rotate.png);
+}
+.SampleTypesIcon {
+    content: url(Hatch_Files/Toolbar/SampleTypes.png);
+}
+.SnapToGridIcon {
+    content: url(Hatch_Files/Toolbar/SnapToGrid.png);
+}
+.SwitchViewIcon {
+    content: url(Hatch_Files/Toolbar/SwitchView.png);
+}
+.TableIcon {
+    content: url(Hatch_Files/Toolbar/Table.png);
+}
+.TerrainIcon {
+    content: url(Hatch_Files/Toolbar/Terrain.png);
+}
+.TriangleIcon {
+    content: url(Hatch_Files/Toolbar/Triangle.png);
+}
+.UndoIcon {
+    content: url(Hatch_Files/Toolbar/Undo.png);
+}
+.UsernameIcon {
+    content: url(Hatch_Files/Toolbar/Username.png);
+}
+.Zoom100Icon {
+    content: url(Hatch_Files/Toolbar/Zoom100.png);
+}
+.ZoomAllIcon {
+    content: url(Hatch_Files/Toolbar/ZoomAll.png);
+}
+.ZoomInIcon {
+    content: url(Hatch_Files/Toolbar/ZoomIn.png);
+}
+.ZoomOutIcon {
+    content: url(Hatch_Files/Toolbar/ZoomOut.png);
+}
+
+.appModal .crossectionsreviewContainer {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    justify-items: center;
+    align-content: center;
+    align-items: center;
+    margin-left: 60px;
+}
+
+.appModal #crossectionsreview {
+    
+}
+
+.crossectionsreviewContainer .placeholderItemRight,
+.crossectionsreviewContainer .canvasTooltipContainer {
+    flex-grow: 1;
+    flex-basis: 0;
+}
+.crossectionsreviewContainer .canvasTooltipContainer {
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                   Svg css                                  */
+/* -------------------------------------------------------------------------- */
+
+text {
+    font-family: Arial, sans-serif;
+  }
+
+path.borehole,
+rect.borehole {
+stroke: grey;
+}
+
+path.polygon {
+stroke: black;
+/*      stroke-width: 1px;   */
+}
+
+path.polygon:hover {
+stroke: red;
+/*    stroke-width: 3px;     */
+}
+
+g.textBox > foreignObject {
+    overflow-x: visible;
+    overflow-y: visible;
+}
+
+g.textBox textarea {
+    resize: both;
+    overflow: hidden;
+}
+
+textarea::-webkit-resizer {
+    background: url(./Hatch_Files/resize-right.svg);
+    background-repeat: no-repeat;
+    background-position: bottom right;
+    background-size:15px;
+}
+
+.textAreaNoBorder {
+    border-color: transparent;
+}
+
+.textAreaNoBorder::-webkit-resizer {
+    display: none;
+}
+
+.bhpoint {
+fill-opacity: 0;
+stroke: unset;
+}
+
+.bhpoint:hover, .freepoint:hover {
+    fill-opacity: 1;
+    fill: lightgreen;
+    stroke: green;
+}
+
+.point.waitforconnect {
+fill-opacity: 1;
+fill: red;
+stroke: red;
+}
+
+.link {
+fill-opacity: 0.6;
+}
+
+.screenshotinvizible {
+visibility: hidden;
+}
+
+svg {
+cursor: pointer;
+}
+
+svg:active {
+cursor: move;
+}
+
+g.grid line,
+.fieldtests .fieldTestGrid line {
+stroke: lightgrey;
+pointer-events: none;
+}
+
+g.grid.aboveAll line {
+visibility: hidden;
+}
+
+
+g.cdr rect {
+fill-opacity: 0.0;
+}
+
+g.cdr rect:hover {
+fill-opacity: 0.3;
+fill: green;
+}
+
+< !-- g.cdr {
+pointer-events: bounding-box;
+}
+
+-->g.cdr line {
+stroke: blue;
+stroke-width: 4px;
+}
+
+.legendBox rect.rbkg {
+stroke: black;
+stroke-width: 1px;
+}
+
+.legendBox rect {
+stroke: black;
+stroke-width: 1px;
+}
+
+.tooltip-rect {
+fill-opacity: 0.8;
+}
+
+.tooltip-text {
+display: inline-block;
+}
+
+text.layery {
+dominant-baseline: central;
+}
+
+text.layerinfo {
+dominant-baseline: central;
+}
+
+.legend-text-item {
+    dominant-baseline: central;
+}
+
+.polygonInterrogationPoint {
+    dominant-baseline: central;
+    text-anchor: middle;
+}
+
+.hidden-canvas {
+visibility: hidden;
+display: none;
+}
+
+.download-image {
+display: block;
+}
+
+.polygon-hatch-message > text {
+    font-weight: bold;
+    text-anchor: middle;
+    dominant-baseline: middle;
+    fill: red;
+    fill-opacity: 0.7;
+}
+
+.polygon-hatch-message > rect {
+    fill: lightgray;
+    fill-opacity: 0.7;
+}
+
+.rootContainer {
+    display: flex;
+    flex-direction: horizontal;
+}
+
+.rootElem {
+    min-width: 100vw;
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.modal3d {
+    z-index: 10000;
+}
+
+.modal3d .modal-dialog {
+    max-width: 97%;
+    margin-left: 1.5%;
+}
+
+.modal3d .modal-body {
+    max-height: calc(100vh - 200px);
+    overflow-y: auto;
+    padding: 0px;
+}
+
+/* RIGHT CLICK MENU STYLES */
+.right-click-menu {
+    z-index: 9999999;
+    position: absolute;
+    width: 250px;
+    background-color: #fff;
+    top: 0px;
+    left: 0px;
+    display: none;
+    border: 1px solid #ddd;
+    padding: 5px;
+}
+
+.right-menu-item label {
+    margin-bottom: 0px;
+}
+
+.right-menu-item {
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.right-menu-item input[type="text"] {
+    max-width: 60%;
+    z-index: 1;
+}
+
+.right-menu-item select {
+    max-width: 60%;
+    min-width: 60%;
+}
+
+.align-right {
+    justify-content: flex-end;
+}
+
+.view3d {
+    position: relative;
+}
+
+.worldAxis {
+    position: absolute;
+    bottom: -20px;
+    left: -5px;
+}
+
+.viewCube {
+    position: absolute;
+    top: 0px;
+    right: -15px;
+}
+
+.bottomRightCorner {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+}
+
+.topLeftCorner {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+}
+
+/* --- 3D View Hover Tool --- */
+
+.topRightCornerUnderCube {
+    position: absolute;
+    top: 120px;
+    right: 5px;    
+}
+
+.ThreeDList {
+    list-style: none;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.chosenThreeD { 
+    display: none;
+}
+
+.btnThreeD {
+    width: 60px;
+    height: 55px;
+    padding: 2.5px;
+    overflow: hidden;
+    transition: all .2s ease-in-out;
+    background-color: rgba(255, 255, 255, 0.578);
+    border-radius: 5px;
+    text-align: center;
+}
+
+#ThreeDDisplayIcon {
+    width: 50px;
+    height: 50px;
+}
+
+.listItemThreeD {
+    width: 40px;
+    height: 40px;
+}
+
+.listItemContainerThreeD {
+    margin-top: 5px;
+    cursor: pointer;
+    transition: all .4s ease-in-out;
+}
+
+.btnThreeD:hover {
+    width: 60px;
+    height: 282px;
+    transition: all .4s ease-in-out;
+}
+
+/* --- 3D View Hover Tool End --- */
+
+/* ---  Plan view hover tool ---*/
+.topRightCorner {
+    position: absolute;
+    top: 5px;
+    right: 5px;    
+}
+
+.planList {
+    list-style: none;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.chosenPlan { 
+    display: none;
+}
+
+.btnPlan {
+    width: 60px;
+    height: 55px;
+    padding: 2.5px;
+    overflow: hidden;
+    transition: all .2s ease-in-out;
+    background-color: rgba(255, 255, 255, 0.578);
+    border-radius: 5px;
+    text-align: center;
+}
+
+#planDisplayIcon {
+    width: 50px;
+    height: 50px;
+}
+
+.listItemPlan {
+    width: 40px;
+    height: 40px;
+}
+
+.listItemContainerPlan {
+    margin-top: 5px;
+    cursor: pointer;
+    transition: all .4s ease-in-out;
+}
+
+.btnPlan:hover {
+    width: 60px;
+    height: 192px;
+    transition: all .4s ease-in-out;
+}
+
+/* --- PlanV view hover tool end ---*/
+
+.cameraType {
+    font-size: 12px;
+}
+
+.progress3D {
+    position: absolute;
+    height: 3px;
+    bottom: 0px;
+    width: 174px;
+    z-index: 9999;
+}
+
+.progress3D .customProgressBar {
+    background-color: #e35305 !important;
+    height: 100%;
+}
+
+/* https://projects.lukehaas.me/css-loaders/ */
+.customLoader,
+.customLoader:after {
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+}
+.customLoader {
+  align-self: center;
+  justify-self: center;
+  font-size: 10px;
+  position: relative;
+  text-indent: -9999em;
+  border-top: 2px solid transparent;
+  border-right: 2px solid transparent;
+  border-bottom: 2px solid transparent;
+  border-left: 2px solid #000000;
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-animation: load8 1.1s infinite linear;
+  animation: load8 1.1s infinite linear;
+}
+@-webkit-keyframes load8 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes load8 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+.g-borehole.selectedElem,
+.fieldtest-plot.selectedElem,
+.legend.selectedElem,
+path.selectedElem,
+.point.selectedElem,
+text.selectedElem,
+.selectedElem > path.link {
+    animation: blinker 1.7s step-start infinite;
+}
+
+.selectedHatch .textContainer *{
+    color: #e35305;
+}
+
+.selectHatchTooltip button:focus {
+    outline: unset;
+}
+
+@keyframes blinkerOutline {
+    50% {
+      outline: 0px;
+    }
+}
+
+@keyframes blinkerStroke {
+50% {
+    stroke-opacity: 0;
+}
+}
+
+@keyframes blinker {
+    50% {
+      visibility: hidden;
+    }
+}

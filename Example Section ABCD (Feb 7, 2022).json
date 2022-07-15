@@ -1,0 +1,1344 @@
+{
+    "title": "Section A",
+    "figure_templates": "51172080-7E86-4447-990B-04CF1C25048E|Figure Template,BAEA2269-DDBE-45F0-9EE0-42482DAFBDF9|Figure Template (new test),CC68C257-0E47-44BA-9E91-43B8457EF817|Cross Section Report - Copy,CC79ED6F-2DC2-4CA6-9124-E7FB6457AFFB|Cross Section Report",
+    "data": [
+        {
+            "id": "b206a043-7f19-705f-35aa-3a0157d5e30f",
+            "name": "BH21-01",
+            "general": {
+                "x": 0,
+                "z": 23.5,
+                "water": 4.1,
+                "th_viewer_coordinates": "503546.4510366272, 5494128.921410542, 23.5",
+                "disp_w": 100,
+                "test_data": [
+                    {
+                        "title": "Dynamic Cone Penetration Test (DCPT)",
+                        "data": "1,14|3,59|5,6|7,27|9,34|11,62|13,67|15,45|17,50|19,69|21,20|23,33|25,65|27,69|29,50|31,38|33,39|35,46|37,55|39,59|41,28|43,69|45,54|47,69|49,68|51,65|53,63|55,19|57,32|59,34|61,40"
+                    },
+                    {
+                        "title": "Shear Wave Velocity (Down hole / Cross hole)",
+                        "data": "1.5,140|3.5,590|5.5,60|7.5,270|9.5,340|11.5,620|13.5,670|15.5,450|17.5,500|19.5,690|21.5,200|23.5,330|25.5,650|27.5,690|29.5,500|31.5,380|33.5,390|35.5,460|37.5,550|39.5,590|41.5,280|43.5,690|45.5,540|47.5,690|49.5,680|51.5,650|53.5,630|55.5,190|57.5,320|59.5,340|61.5,400"
+                    }
+                ],
+                "plunge": "90",
+                "test_yz": 23.5,
+                "test_xx": -22.29175988051315
+            },
+            "soillayer": [
+                {
+                    "from": 0,
+                    "to": 0.5,
+                    "layerTitle": "Road Structure",
+                    "layerSymbol": "FL",
+                    "timestamp": 3
+                },
+                {
+                    "from": 0.5,
+                    "to": 7,
+                    "layerTitle": "Silty Sand",
+                    "layerSymbol": "SM",
+                    "timestamp": 4
+                },
+                {
+                    "from": 7,
+                    "to": 11.5,
+                    "layerTitle": "Silty Sand",
+                    "layerSymbol": "SW-SM",
+                    "timestamp": 5
+                },
+                {
+                    "from": 11.5,
+                    "to": 20,
+                    "layerTitle": "Sand (clayey)",
+                    "layerSymbol": "GP-GM",
+                    "timestamp": 6
+                },
+                {
+                    "from": 20,
+                    "to": 26,
+                    "layerTitle": "Sand (silty)",
+                    "layerSymbol": "SM",
+                    "timestamp": 7
+                },
+                {
+                    "from": 26,
+                    "to": 35,
+                    "layerTitle": "Sandstone",
+                    "layerSymbol": "Sandstone",
+                    "timestamp": 8
+                }
+            ],
+            "ally": [
+                {
+                    "timestamp": 9,
+                    "y": 0,
+                    "x": 0,
+                    "bhname": "BH21-01",
+                    "left": true,
+                    "yz": 23.5,
+                    "correct_yz": 23.5,
+                    "xx": -3
+                },
+                {
+                    "timestamp": 10,
+                    "y": 0,
+                    "x": 0,
+                    "bhname": "BH21-01",
+                    "yz": 23.5,
+                    "correct_yz": 23.5,
+                    "xx": 3
+                },
+                {
+                    "timestamp": 11,
+                    "y": 0.5,
+                    "x": 0,
+                    "bhname": "BH21-01",
+                    "left": true,
+                    "yz": 23,
+                    "correct_yz": 23,
+                    "xx": -3
+                },
+                {
+                    "timestamp": 12,
+                    "y": 0.5,
+                    "x": 0,
+                    "bhname": "BH21-01",
+                    "yz": 23,
+                    "correct_yz": 23,
+                    "xx": 3
+                },
+                {
+                    "timestamp": 13,
+                    "y": 7,
+                    "x": 0,
+                    "bhname": "BH21-01",
+                    "left": true,
+                    "yz": 16.5,
+                    "correct_yz": 16.5,
+                    "xx": -2.9999999999999996
+                },
+                {
+                    "timestamp": 14,
+                    "y": 7,
+                    "x": 0,
+                    "bhname": "BH21-01",
+                    "yz": 16.5,
+                    "correct_yz": 16.5,
+                    "xx": 3.0000000000000004
+                },
+                {
+                    "timestamp": 15,
+                    "y": 11.5,
+                    "x": 0,
+                    "bhname": "BH21-01",
+                    "left": true,
+                    "yz": 12,
+                    "correct_yz": 12,
+                    "xx": -2.999999999999999
+                },
+                {
+                    "timestamp": 16,
+                    "y": 11.5,
+                    "x": 0,
+                    "bhname": "BH21-01",
+                    "yz": 12,
+                    "correct_yz": 12,
+                    "xx": 3.000000000000001
+                },
+                {
+                    "timestamp": 17,
+                    "y": 20,
+                    "x": 0,
+                    "bhname": "BH21-01",
+                    "left": true,
+                    "yz": 3.5,
+                    "correct_yz": 3.5,
+                    "xx": -2.9999999999999987
+                },
+                {
+                    "timestamp": 18,
+                    "y": 20,
+                    "x": 0,
+                    "bhname": "BH21-01",
+                    "yz": 3.5,
+                    "correct_yz": 3.5,
+                    "xx": 3.0000000000000013
+                },
+                {
+                    "timestamp": 19,
+                    "y": 26,
+                    "x": 0,
+                    "bhname": "BH21-01",
+                    "left": true,
+                    "yz": -2.5,
+                    "correct_yz": -2.5,
+                    "xx": -2.9999999999999982
+                },
+                {
+                    "timestamp": 20,
+                    "y": 26,
+                    "x": 0,
+                    "bhname": "BH21-01",
+                    "yz": -2.5,
+                    "correct_yz": -2.5,
+                    "xx": 3.0000000000000018
+                },
+                {
+                    "timestamp": 21,
+                    "y": 35,
+                    "x": 0,
+                    "bhname": "BH21-01",
+                    "left": true,
+                    "yz": -11.5,
+                    "correct_yz": -11.5,
+                    "xx": -2.999999999999998
+                },
+                {
+                    "timestamp": 22,
+                    "y": 35,
+                    "x": 0,
+                    "bhname": "BH21-01",
+                    "yz": -11.5,
+                    "correct_yz": -11.5,
+                    "xx": 3.000000000000002
+                }
+            ],
+            "waterPoint": {
+                "timestamp": 23,
+                "bhname": "BH21-01",
+                "x": 0,
+                "y": 4.1,
+                "xx": 2.5105259382520737e-16,
+                "yz": 19.4,
+                "correct_yz": 27.6,
+                "textHidden": true
+            }
+        },
+        {
+            "id": "d335c8fd-0218-af34-df92-3a0157d677de",
+            "name": "BH21-03",
+            "general": {
+                "x": 73.31619814868877,
+                "z": 21.8,
+                "water": 4.5,
+                "th_viewer_coordinates": "503612.9960927136, 5494159.695107451, 21.8",
+                "disp_w": 100,
+                "test_data": [
+                    {
+                        "title": "Dynamic Cone Penetration Test (DCPT)",
+                        "data": "1,32|3,99|5,17|7,50|9,61|11,102|13,109|15,89|17,85|19,114|21,47|23,56|25,109|27,124|29,77|31,71|33,71|35,78|37,103|39,103|41,55|43,124|45,99|47,125"
+                    }
+                ],
+                "plunge": "90",
+                "test_yz": 21.8,
+                "test_xx": 87.70807302577968
+            },
+            "soillayer": [
+                {
+                    "from": 0,
+                    "to": 3.5,
+                    "layerTitle": "Fill",
+                    "layerSymbol": "FL",
+                    "timestamp": 24
+                },
+                {
+                    "from": 3.5,
+                    "to": 13,
+                    "layerTitle": "Sand (silty)",
+                    "layerSymbol": "SM",
+                    "timestamp": 25
+                },
+                {
+                    "from": 13,
+                    "to": 19,
+                    "layerTitle": "Sandy Gravel",
+                    "layerSymbol": "GP-GM",
+                    "timestamp": 26
+                },
+                {
+                    "from": 19,
+                    "to": 28,
+                    "layerTitle": "Sand (clayey)",
+                    "layerSymbol": "SC",
+                    "timestamp": 27
+                },
+                {
+                    "from": 28,
+                    "to": 33,
+                    "layerTitle": "Sandstone",
+                    "layerSymbol": "Sandstone",
+                    "timestamp": 28
+                }
+            ],
+            "ally": [
+                {
+                    "timestamp": 29,
+                    "y": 0,
+                    "x": 73.31619814868877,
+                    "bhname": "BH21-03",
+                    "left": true,
+                    "yz": 21.8,
+                    "correct_yz": 21.8,
+                    "xx": 70.31619814868877
+                },
+                {
+                    "timestamp": 30,
+                    "y": 0,
+                    "x": 73.31619814868877,
+                    "bhname": "BH21-03",
+                    "yz": 21.8,
+                    "correct_yz": 21.8,
+                    "xx": 76.31619814868877
+                },
+                {
+                    "timestamp": 31,
+                    "y": 3.5,
+                    "x": 73.31619814868877,
+                    "bhname": "BH21-03",
+                    "left": true,
+                    "yz": 18.3,
+                    "correct_yz": 18.3,
+                    "xx": 70.31619814868877
+                },
+                {
+                    "timestamp": 32,
+                    "y": 3.5,
+                    "x": 73.31619814868877,
+                    "bhname": "BH21-03",
+                    "yz": 18.3,
+                    "correct_yz": 18.3,
+                    "xx": 76.31619814868877
+                },
+                {
+                    "timestamp": 33,
+                    "y": 13,
+                    "x": 73.31619814868877,
+                    "bhname": "BH21-03",
+                    "left": true,
+                    "yz": 8.8,
+                    "correct_yz": 8.8,
+                    "xx": 70.31619814868877
+                },
+                {
+                    "timestamp": 34,
+                    "y": 13,
+                    "x": 73.31619814868877,
+                    "bhname": "BH21-03",
+                    "yz": 8.8,
+                    "correct_yz": 8.8,
+                    "xx": 76.31619814868877
+                },
+                {
+                    "timestamp": 35,
+                    "y": 19,
+                    "x": 73.31619814868877,
+                    "bhname": "BH21-03",
+                    "left": true,
+                    "yz": 2.8000000000000007,
+                    "correct_yz": 2.8000000000000007,
+                    "xx": 70.31619814868877
+                },
+                {
+                    "timestamp": 36,
+                    "y": 19,
+                    "x": 73.31619814868877,
+                    "bhname": "BH21-03",
+                    "yz": 2.8000000000000007,
+                    "correct_yz": 2.8000000000000007,
+                    "xx": 76.31619814868877
+                },
+                {
+                    "timestamp": 37,
+                    "y": 28,
+                    "x": 73.31619814868877,
+                    "bhname": "BH21-03",
+                    "left": true,
+                    "yz": -6.199999999999999,
+                    "correct_yz": -6.199999999999999,
+                    "xx": 70.31619814868877
+                },
+                {
+                    "timestamp": 38,
+                    "y": 28,
+                    "x": 73.31619814868877,
+                    "bhname": "BH21-03",
+                    "yz": -6.199999999999999,
+                    "correct_yz": -6.199999999999999,
+                    "xx": 76.31619814868877
+                },
+                {
+                    "timestamp": 39,
+                    "y": 33,
+                    "x": 73.31619814868877,
+                    "bhname": "BH21-03",
+                    "left": true,
+                    "yz": -11.2,
+                    "correct_yz": -11.2,
+                    "xx": 70.31619814868877
+                },
+                {
+                    "timestamp": 40,
+                    "y": 33,
+                    "x": 73.31619814868877,
+                    "bhname": "BH21-03",
+                    "yz": -11.2,
+                    "correct_yz": -11.2,
+                    "xx": 76.31619814868877
+                }
+            ],
+            "waterPoint": {
+                "timestamp": 41,
+                "bhname": "BH21-03",
+                "x": 73.31619814868877,
+                "y": 4.5,
+                "xx": 73.31619814868877,
+                "yz": 17.3,
+                "correct_yz": 26.3,
+                "textHidden": true
+            }
+        },
+        {
+            "id": "3994febd-3fdb-6097-d466-3a0157d6375b",
+            "name": "BH21-02",
+            "general": {
+                "x": 184.28703237052304,
+                "z": 25.2,
+                "water": 6.1,
+                "th_viewer_coordinates": "503704.9805146211, 5494097.61941032, 25.2",
+                "disp_w": 100,
+                "test_data": [
+                    {
+                        "title": "Dynamic Cone Penetration Test (DCPT)",
+                        "data": "1,19|3,74|5,13|7,38|9,48|11,78|13,87|15,64|17,68|19,88|21,32|23,45|25,84|27,94|29,62|31,53|33,55|35,58|37,75|39,82|41,44|43,71|45,75|47,67|49,49|51,46|53,70|55,64"
+                    }
+                ],
+                "plunge": "90",
+                "test_yz": 25.2,
+                "test_xx": 197.36292920037968
+            },
+            "soillayer": [
+                {
+                    "from": 0,
+                    "to": 3.5,
+                    "layerTitle": "Fill Material",
+                    "layerSymbol": "FL",
+                    "timestamp": 42
+                },
+                {
+                    "from": 3.5,
+                    "to": 11.5,
+                    "layerTitle": "Silty Sand",
+                    "layerSymbol": "SM",
+                    "timestamp": 43
+                },
+                {
+                    "from": 11.5,
+                    "to": 16,
+                    "layerTitle": "Sandy Gravel",
+                    "layerSymbol": "GP-GM",
+                    "timestamp": 44
+                },
+                {
+                    "from": 16,
+                    "to": 22,
+                    "layerTitle": "Sand (Silty)",
+                    "layerSymbol": "SM",
+                    "timestamp": 45
+                },
+                {
+                    "from": 22,
+                    "to": 29,
+                    "layerTitle": "Sandstone",
+                    "layerSymbol": "Sandstone",
+                    "timestamp": 46
+                }
+            ],
+            "ally": [
+                {
+                    "timestamp": 47,
+                    "y": 0,
+                    "x": 184.28703237052304,
+                    "bhname": "BH21-02",
+                    "left": true,
+                    "yz": 25.2,
+                    "correct_yz": 25.2,
+                    "xx": 181.28703237052304
+                },
+                {
+                    "timestamp": 48,
+                    "y": 0,
+                    "x": 184.28703237052304,
+                    "bhname": "BH21-02",
+                    "yz": 25.2,
+                    "correct_yz": 25.2,
+                    "xx": 187.28703237052304
+                },
+                {
+                    "timestamp": 49,
+                    "y": 3.5,
+                    "x": 184.28703237052304,
+                    "bhname": "BH21-02",
+                    "left": true,
+                    "yz": 21.7,
+                    "correct_yz": 21.7,
+                    "xx": 181.28703237052304
+                },
+                {
+                    "timestamp": 50,
+                    "y": 3.5,
+                    "x": 184.28703237052304,
+                    "bhname": "BH21-02",
+                    "yz": 21.7,
+                    "correct_yz": 21.7,
+                    "xx": 187.28703237052304
+                },
+                {
+                    "timestamp": 51,
+                    "y": 11.5,
+                    "x": 184.28703237052304,
+                    "bhname": "BH21-02",
+                    "left": true,
+                    "yz": 13.7,
+                    "correct_yz": 13.7,
+                    "xx": 181.28703237052304
+                },
+                {
+                    "timestamp": 52,
+                    "y": 11.5,
+                    "x": 184.28703237052304,
+                    "bhname": "BH21-02",
+                    "yz": 13.7,
+                    "correct_yz": 13.7,
+                    "xx": 187.28703237052304
+                },
+                {
+                    "timestamp": 53,
+                    "y": 16,
+                    "x": 184.28703237052304,
+                    "bhname": "BH21-02",
+                    "left": true,
+                    "yz": 9.2,
+                    "correct_yz": 9.2,
+                    "xx": 181.28703237052304
+                },
+                {
+                    "timestamp": 54,
+                    "y": 16,
+                    "x": 184.28703237052304,
+                    "bhname": "BH21-02",
+                    "yz": 9.2,
+                    "correct_yz": 9.2,
+                    "xx": 187.28703237052304
+                },
+                {
+                    "timestamp": 55,
+                    "y": 22,
+                    "x": 184.28703237052304,
+                    "bhname": "BH21-02",
+                    "left": true,
+                    "yz": 3.1999999999999993,
+                    "correct_yz": 3.1999999999999993,
+                    "xx": 181.28703237052304
+                },
+                {
+                    "timestamp": 56,
+                    "y": 22,
+                    "x": 184.28703237052304,
+                    "bhname": "BH21-02",
+                    "yz": 3.1999999999999993,
+                    "correct_yz": 3.1999999999999993,
+                    "xx": 187.28703237052304
+                },
+                {
+                    "timestamp": 57,
+                    "y": 29,
+                    "x": 184.28703237052304,
+                    "bhname": "BH21-02",
+                    "left": true,
+                    "yz": -3.8000000000000007,
+                    "correct_yz": -3.8000000000000007,
+                    "xx": 181.28703237052304
+                },
+                {
+                    "timestamp": 58,
+                    "y": 29,
+                    "x": 184.28703237052304,
+                    "bhname": "BH21-02",
+                    "yz": -3.8000000000000007,
+                    "correct_yz": -3.8000000000000007,
+                    "xx": 187.28703237052304
+                }
+            ],
+            "waterPoint": {
+                "timestamp": 59,
+                "bhname": "BH21-02",
+                "x": 184.28703237052304,
+                "y": 6.1,
+                "xx": 184.28703237052304,
+                "yz": 19.1,
+                "correct_yz": 31.299999999999997,
+                "textHidden": true
+            }
+        }
+    ],
+    "fieldTestWidths": {
+        "Dynamic Cone Penetration Test (DCPT)": 31.816737816684757,
+        "Unknown": 12.565796816525827
+    },
+    "fieldTestProperties": "{\"3\":{\"backgroundColor\":\"White\",\"lineColor\":\"black\",\"lineFillColor\":\"Magenta\",\"pointColor\":\"Magenta\",\"showPoints\":true,\"showPointsValues\":true,\"plotOpacity\":\"0.7\"},\"4\":{\"backgroundColor\":\"white\",\"lineColor\":\"black\",\"lineFillColor\":\"lightgreen\",\"pointColor\":\"darkgreen\",\"showPoints\":true,\"plotOpacity\":0.7},\"18\":{\"backgroundColor\":\"white\",\"lineColor\":\"black\",\"lineFillColor\":\"lightgreen\",\"pointColor\":\"darkgreen\",\"showPoints\":true,\"plotOpacity\":0.7},\"24\":{\"backgroundColor\":\"white\",\"lineColor\":\"black\",\"lineFillColor\":\"lightgreen\",\"pointColor\":\"darkgreen\",\"showPoints\":true,\"showPointsValues\":true,\"plotOpacity\":0.7},\"42\":{\"backgroundColor\":\"white\",\"lineColor\":\"black\",\"lineFillColor\":\"lightgreen\",\"pointColor\":\"darkgreen\",\"showPoints\":true,\"showPointsValues\":true,\"plotOpacity\":0.7}}",
+    "boreholeProperties": {
+        "3": {
+            "showDepthLabels": true,
+            "showSoilDescriptions": true,
+            "showFieldTestPlots": true
+        },
+        "4": {
+            "showDepthLabels": true,
+            "showSoilDescriptions": true,
+            "showFieldTestPlots": true
+        },
+        "18": {
+            "showDepthLabels": true,
+            "showSoilDescriptions": true,
+            "showFieldTestPlots": true
+        },
+        "24": {
+            "showDepthLabels": true,
+            "showSoilDescriptions": true,
+            "showFieldTestPlots": true
+        },
+        "28": {
+            "showDepthLabels": true,
+            "showSoilDescriptions": true,
+            "showFieldTestPlots": true
+        },
+        "42": {
+            "showDepthLabels": true,
+            "showSoilDescriptions": true,
+            "showFieldTestPlots": true
+        }
+    },
+    "legendNames": {},
+    "LINKS": [],
+    "POLYGONS": [
+        {
+            "poly": true,
+            "timestamp": 76,
+            "points": [
+                {
+                    "timestamp": 20,
+                    "y": 26,
+                    "x": 0,
+                    "bhname": "BH21-01",
+                    "yz": -2.5,
+                    "correct_yz": -2.5,
+                    "xx": 3.0000000000000018
+                },
+                {
+                    "timestamp": 37,
+                    "y": 28,
+                    "x": 73.31619814868877,
+                    "bhname": "BH21-03",
+                    "left": true,
+                    "yz": -6.199999999999999,
+                    "correct_yz": -6.199999999999999,
+                    "xx": 70.31619814868877
+                },
+                {
+                    "timestamp": 39,
+                    "y": 33,
+                    "x": 73.31619814868877,
+                    "bhname": "BH21-03",
+                    "left": true,
+                    "yz": -11.2,
+                    "correct_yz": -11.2,
+                    "xx": 70.31619814868877
+                },
+                {
+                    "timestamp": 22,
+                    "y": 35,
+                    "x": 0,
+                    "bhname": "BH21-01",
+                    "yz": -11.5,
+                    "correct_yz": -11.5,
+                    "xx": 3.000000000000002
+                }
+            ],
+            "f": "url(#/Hatch_Files/PNG/Rock/Black/Sandstone.png)",
+            "fsrc": "Hatch_Files/PNG/Rock/Black/Sandstone.png"
+        },
+        {
+            "poly": true,
+            "timestamp": 88,
+            "points": [
+                {
+                    "timestamp": 38,
+                    "y": 28,
+                    "x": 73.31619814868877,
+                    "bhname": "BH21-03",
+                    "yz": -6.199999999999999,
+                    "correct_yz": -6.199999999999999,
+                    "xx": 76.31619814868877
+                },
+                {
+                    "timestamp": 40,
+                    "y": 33,
+                    "x": 73.31619814868877,
+                    "bhname": "BH21-03",
+                    "yz": -11.2,
+                    "correct_yz": -11.2,
+                    "xx": 76.31619814868877
+                },
+                {
+                    "timestamp": 78,
+                    "x": 124.28034553676761,
+                    "yz": -10.217158868094222,
+                    "correct_yz": -10.217158868094222,
+                    "iamextrapoint": true,
+                    "belongsToPoly": [],
+                    "y": 10.217158868094222
+                },
+                {
+                    "timestamp": 80,
+                    "x": 113.48233550156506,
+                    "yz": -8.359436364212389,
+                    "correct_yz": -8.359436364212389,
+                    "iamextrapoint": true,
+                    "belongsToPoly": [],
+                    "y": 8.359436364212389
+                },
+                {
+                    "timestamp": 82,
+                    "x": 155.97773858530627,
+                    "yz": -6.850037233530521,
+                    "correct_yz": -6.850037233530521,
+                    "iamextrapoint": true,
+                    "belongsToPoly": [],
+                    "y": 6.850037233530521
+                },
+                {
+                    "timestamp": 84,
+                    "x": 149.47571951105078,
+                    "yz": -5.340637295404408,
+                    "correct_yz": -5.340637295404408,
+                    "iamextrapoint": true,
+                    "belongsToPoly": [],
+                    "y": 5.340637295404408
+                },
+                {
+                    "timestamp": 57,
+                    "y": 29,
+                    "x": 184.28703237052304,
+                    "bhname": "BH21-02",
+                    "left": true,
+                    "yz": -3.8000000000000007,
+                    "correct_yz": -3.8000000000000007,
+                    "xx": 181.28703237052304
+                },
+                {
+                    "timestamp": 55,
+                    "y": 22,
+                    "x": 184.28703237052304,
+                    "bhname": "BH21-02",
+                    "left": true,
+                    "yz": 3.1999999999999993,
+                    "correct_yz": 3.1999999999999993,
+                    "xx": 181.28703237052304
+                }
+            ],
+            "f": "url(#/Hatch_Files/PNG/Rock/Black/Sandstone.png)",
+            "fsrc": "Hatch_Files/PNG/Rock/Black/Sandstone.png"
+        },
+        {
+            "poly": true,
+            "timestamp": 92,
+            "points": [
+                {
+                    "timestamp": 53,
+                    "y": 16,
+                    "x": 184.28703237052304,
+                    "bhname": "BH21-02",
+                    "left": true,
+                    "yz": 9.2,
+                    "correct_yz": 9.2,
+                    "xx": 181.28703237052304
+                },
+                {
+                    "timestamp": 55,
+                    "y": 22,
+                    "x": 184.28703237052304,
+                    "bhname": "BH21-02",
+                    "left": true,
+                    "yz": 3.1999999999999993,
+                    "correct_yz": 3.1999999999999993,
+                    "xx": 181.28703237052304
+                },
+                {
+                    "timestamp": 38,
+                    "y": 28,
+                    "x": 73.31619814868877,
+                    "bhname": "BH21-03",
+                    "yz": -6.199999999999999,
+                    "correct_yz": -6.199999999999999,
+                    "xx": 76.31619814868877
+                },
+                {
+                    "timestamp": 36,
+                    "y": 19,
+                    "x": 73.31619814868877,
+                    "bhname": "BH21-03",
+                    "yz": 2.8000000000000007,
+                    "correct_yz": 2.8000000000000007,
+                    "xx": 76.31619814868877
+                }
+            ],
+            "f": "url(#/Hatch_Files/PNG/Soil/Black/SM.png)",
+            "fsrc": "Hatch_Files/PNG/Soil/Black/SM.png"
+        },
+        {
+            "poly": true,
+            "timestamp": 98,
+            "points": [
+                {
+                    "timestamp": 37,
+                    "y": 28,
+                    "x": 73.31619814868877,
+                    "bhname": "BH21-03",
+                    "left": true,
+                    "yz": -6.199999999999999,
+                    "correct_yz": -6.199999999999999,
+                    "xx": 70.31619814868877
+                },
+                {
+                    "timestamp": 35,
+                    "y": 19,
+                    "x": 73.31619814868877,
+                    "bhname": "BH21-03",
+                    "left": true,
+                    "yz": 2.8000000000000007,
+                    "correct_yz": 2.8000000000000007,
+                    "xx": 70.31619814868877
+                },
+                {
+                    "timestamp": 18,
+                    "y": 20,
+                    "x": 0,
+                    "bhname": "BH21-01",
+                    "yz": 3.5,
+                    "correct_yz": 3.5,
+                    "xx": 3.0000000000000013
+                },
+                {
+                    "timestamp": 20,
+                    "y": 26,
+                    "x": 0,
+                    "bhname": "BH21-01",
+                    "yz": -2.5,
+                    "correct_yz": -2.5,
+                    "xx": 3.0000000000000018
+                }
+            ],
+            "f": "url(#/Hatch_Files/PNG/Soil/Cyan/SM.png)",
+            "fsrc": "Hatch_Files/PNG/Soil/Cyan/SM.png"
+        },
+        {
+            "poly": true,
+            "timestamp": 104,
+            "points": [
+                {
+                    "timestamp": 33,
+                    "y": 13,
+                    "x": 73.31619814868877,
+                    "bhname": "BH21-03",
+                    "left": true,
+                    "yz": 8.8,
+                    "correct_yz": 8.8,
+                    "xx": 70.31619814868877
+                },
+                {
+                    "timestamp": 35,
+                    "y": 19,
+                    "x": 73.31619814868877,
+                    "bhname": "BH21-03",
+                    "left": true,
+                    "yz": 2.8000000000000007,
+                    "correct_yz": 2.8000000000000007,
+                    "xx": 70.31619814868877
+                },
+                {
+                    "timestamp": 18,
+                    "y": 20,
+                    "x": 0,
+                    "bhname": "BH21-01",
+                    "yz": 3.5,
+                    "correct_yz": 3.5,
+                    "xx": 3.0000000000000013
+                },
+                {
+                    "timestamp": 16,
+                    "y": 11.5,
+                    "x": 0,
+                    "bhname": "BH21-01",
+                    "yz": 12,
+                    "correct_yz": 12,
+                    "xx": 3.000000000000001
+                },
+                {
+                    "timestamp": 102,
+                    "x": 35.807439289006645,
+                    "yz": 10.566162916793408,
+                    "correct_yz": 10.566162916793408,
+                    "iamextrapoint": true,
+                    "belongsToPoly": [],
+                    "y": -10.566162916793408
+                }
+            ],
+            "f": "url(#/Hatch_Files/PNG/Soil/Black/GM.png)",
+            "fsrc": "Hatch_Files/PNG/Soil/Black/GM.png"
+        },
+        {
+            "poly": true,
+            "timestamp": 110,
+            "points": [
+                {
+                    "timestamp": 34,
+                    "y": 13,
+                    "x": 73.31619814868877,
+                    "bhname": "BH21-03",
+                    "yz": 8.8,
+                    "correct_yz": 8.8,
+                    "xx": 76.31619814868877
+                },
+                {
+                    "timestamp": 36,
+                    "y": 19,
+                    "x": 73.31619814868877,
+                    "bhname": "BH21-03",
+                    "yz": 2.8000000000000007,
+                    "correct_yz": 2.8000000000000007,
+                    "xx": 76.31619814868877
+                },
+                {
+                    "timestamp": 53,
+                    "y": 16,
+                    "x": 184.28703237052304,
+                    "bhname": "BH21-02",
+                    "left": true,
+                    "yz": 9.2,
+                    "correct_yz": 9.2,
+                    "xx": 181.28703237052304
+                },
+                {
+                    "timestamp": 51,
+                    "y": 11.5,
+                    "x": 184.28703237052304,
+                    "bhname": "BH21-02",
+                    "left": true,
+                    "yz": 13.7,
+                    "correct_yz": 13.7,
+                    "xx": 181.28703237052304
+                }
+            ],
+            "f": "url(#/Hatch_Files/PNG/Soil/Green/GM.png)",
+            "fsrc": "Hatch_Files/PNG/Soil/Green/GM.png"
+        },
+        {
+            "poly": true,
+            "timestamp": 117,
+            "points": [
+                {
+                    "timestamp": 31,
+                    "y": 3.5,
+                    "x": 73.31619814868877,
+                    "bhname": "BH21-03",
+                    "left": true,
+                    "yz": 18.3,
+                    "correct_yz": 18.3,
+                    "xx": 70.31619814868877
+                },
+                {
+                    "timestamp": 33,
+                    "y": 13,
+                    "x": 73.31619814868877,
+                    "bhname": "BH21-03",
+                    "left": true,
+                    "yz": 8.8,
+                    "correct_yz": 8.8,
+                    "xx": 70.31619814868877
+                },
+                {
+                    "timestamp": 102,
+                    "x": 35.807439289006645,
+                    "yz": 10.566162916793408,
+                    "correct_yz": 10.566162916793408,
+                    "iamextrapoint": true,
+                    "belongsToPoly": [],
+                    "y": -10.566162916793408
+                },
+                {
+                    "timestamp": 16,
+                    "y": 11.5,
+                    "x": 0,
+                    "bhname": "BH21-01",
+                    "yz": 12,
+                    "correct_yz": 12,
+                    "xx": 3.000000000000001
+                },
+                {
+                    "timestamp": 14,
+                    "y": 7,
+                    "x": 0,
+                    "bhname": "BH21-01",
+                    "yz": 16.5,
+                    "correct_yz": 16.5,
+                    "xx": 3.0000000000000004
+                }
+            ],
+            "f": "url(#/Hatch_Files/PNG/Soil/Cyan/SM.png)",
+            "fsrc": "Hatch_Files/PNG/Soil/Cyan/SM.png"
+        },
+        {
+            "poly": true,
+            "timestamp": 122,
+            "points": [
+                {
+                    "timestamp": 32,
+                    "y": 3.5,
+                    "x": 73.31619814868877,
+                    "bhname": "BH21-03",
+                    "yz": 18.3,
+                    "correct_yz": 18.3,
+                    "xx": 76.31619814868877
+                },
+                {
+                    "timestamp": 34,
+                    "y": 13,
+                    "x": 73.31619814868877,
+                    "bhname": "BH21-03",
+                    "yz": 8.8,
+                    "correct_yz": 8.8,
+                    "xx": 76.31619814868877
+                },
+                {
+                    "timestamp": 51,
+                    "y": 11.5,
+                    "x": 184.28703237052304,
+                    "bhname": "BH21-02",
+                    "left": true,
+                    "yz": 13.7,
+                    "correct_yz": 13.7,
+                    "xx": 181.28703237052304
+                },
+                {
+                    "timestamp": 49,
+                    "y": 3.5,
+                    "x": 184.28703237052304,
+                    "bhname": "BH21-02",
+                    "left": true,
+                    "yz": 21.7,
+                    "correct_yz": 21.7,
+                    "xx": 181.28703237052304
+                }
+            ],
+            "f": "url(#/Hatch_Files/PNG/Soil/Cyan/SM.png)",
+            "fsrc": "Hatch_Files/PNG/Soil/Cyan/SM.png"
+        },
+        {
+            "poly": true,
+            "timestamp": 126,
+            "points": [
+                {
+                    "timestamp": 47,
+                    "y": 0,
+                    "x": 184.28703237052304,
+                    "bhname": "BH21-02",
+                    "left": true,
+                    "yz": 25.2,
+                    "correct_yz": 25.2,
+                    "xx": 181.28703237052304
+                },
+                {
+                    "timestamp": 49,
+                    "y": 3.5,
+                    "x": 184.28703237052304,
+                    "bhname": "BH21-02",
+                    "left": true,
+                    "yz": 21.7,
+                    "correct_yz": 21.7,
+                    "xx": 181.28703237052304
+                },
+                {
+                    "timestamp": 32,
+                    "y": 3.5,
+                    "x": 73.31619814868877,
+                    "bhname": "BH21-03",
+                    "yz": 18.3,
+                    "correct_yz": 18.3,
+                    "xx": 76.31619814868877
+                },
+                {
+                    "timestamp": 30,
+                    "y": 0,
+                    "x": 73.31619814868877,
+                    "bhname": "BH21-03",
+                    "yz": 21.8,
+                    "correct_yz": 21.8,
+                    "xx": 76.31619814868877
+                }
+            ],
+            "f": "url(#/Hatch_Files/PNG/Soil/Black/FL.png)",
+            "fsrc": "Hatch_Files/PNG/Soil/Black/FL.png"
+        },
+        {
+            "poly": true,
+            "timestamp": 130,
+            "points": [
+                {
+                    "timestamp": 29,
+                    "y": 0,
+                    "x": 73.31619814868877,
+                    "bhname": "BH21-03",
+                    "left": true,
+                    "yz": 21.8,
+                    "correct_yz": 21.8,
+                    "xx": 70.31619814868877
+                },
+                {
+                    "timestamp": 31,
+                    "y": 3.5,
+                    "x": 73.31619814868877,
+                    "bhname": "BH21-03",
+                    "left": true,
+                    "yz": 18.3,
+                    "correct_yz": 18.3,
+                    "xx": 70.31619814868877
+                },
+                {
+                    "timestamp": 12,
+                    "y": 0.5,
+                    "x": 0,
+                    "bhname": "BH21-01",
+                    "yz": 23,
+                    "correct_yz": 23,
+                    "xx": 3
+                },
+                {
+                    "timestamp": 10,
+                    "y": 0,
+                    "x": 0,
+                    "bhname": "BH21-01",
+                    "yz": 23.5,
+                    "correct_yz": 23.5,
+                    "xx": 3
+                }
+            ],
+            "f": "url(#/Hatch_Files/PNG/Soil/Red/FL.png)",
+            "fsrc": "Hatch_Files/PNG/Soil/Red/FL.png"
+        },
+        {
+            "poly": true,
+            "timestamp": 133,
+            "points": [
+                {
+                    "timestamp": 31,
+                    "y": 3.5,
+                    "x": 73.31619814868877,
+                    "bhname": "BH21-03",
+                    "left": true,
+                    "yz": 18.3,
+                    "correct_yz": 18.3,
+                    "xx": 70.31619814868877
+                },
+                {
+                    "timestamp": 14,
+                    "y": 7,
+                    "x": 0,
+                    "bhname": "BH21-01",
+                    "yz": 16.5,
+                    "correct_yz": 16.5,
+                    "xx": 3.0000000000000004
+                },
+                {
+                    "timestamp": 12,
+                    "y": 0.5,
+                    "x": 0,
+                    "bhname": "BH21-01",
+                    "yz": 23,
+                    "correct_yz": 23,
+                    "xx": 3
+                }
+            ],
+            "f": "url(#/Hatch_Files/PNG/Soil/Cyan/SM.png)",
+            "fsrc": "Hatch_Files/PNG/Soil/Cyan/SM.png"
+        }
+    ],
+    "EPOINTS": [
+        {
+            "timestamp": 78,
+            "x": 124.28034553676761,
+            "yz": -10.217158868094222,
+            "correct_yz": -10.217158868094222,
+            "iamextrapoint": true,
+            "belongsToPoly": [],
+            "y": 10.217158868094222
+        },
+        {
+            "timestamp": 80,
+            "x": 113.48233550156506,
+            "yz": -8.359436364212389,
+            "correct_yz": -8.359436364212389,
+            "iamextrapoint": true,
+            "belongsToPoly": [],
+            "y": 8.359436364212389
+        },
+        {
+            "timestamp": 82,
+            "x": 155.97773858530627,
+            "yz": -6.850037233530521,
+            "correct_yz": -6.850037233530521,
+            "iamextrapoint": true,
+            "belongsToPoly": [],
+            "y": 6.850037233530521
+        },
+        {
+            "timestamp": 84,
+            "x": 149.47571951105078,
+            "yz": -5.340637295404408,
+            "correct_yz": -5.340637295404408,
+            "iamextrapoint": true,
+            "belongsToPoly": [],
+            "y": 5.340637295404408
+        },
+        {
+            "timestamp": 102,
+            "x": 35.807439289006645,
+            "yz": 10.566162916793408,
+            "correct_yz": 10.566162916793408,
+            "iamextrapoint": true,
+            "belongsToPoly": [],
+            "y": -10.566162916793408
+        }
+    ],
+    "boreholeWidth": 6,
+    "horScaleFt": 200,
+    "vertScaleFt": 200,
+    "REGCX": 90.69352326370264,
+    "REGCY": 2.210146078962024,
+    "textSize": 26,
+    "LEGDX": -66.8780074146217,
+    "LEGDY": 390.81838265463807,
+    "LEGDXREAL": -3.7154448563678724,
+    "LEGDYREAL": 21.712132369702115,
+    "fillUsedForLegend": [
+        {
+            "src": "/Hatch_Files/PNG/Soil/Red/FL.png"
+        },
+        {
+            "src": "/Hatch_Files/PNG/Soil/Cyan/SM.png"
+        },
+        {
+            "src": "/Hatch_Files/PNG/Soil/Black/SW-SM.png"
+        },
+        {
+            "src": "/Hatch_Files/PNG/Soil/Black/GP-GM.png"
+        },
+        {
+            "src": "/Hatch_Files/PNG/Rock/Maroon/Sandstone.png"
+        },
+        {
+            "src": "/Hatch_Files/PNG/Soil/Black/SC.png"
+        },
+        {
+            "src": "/Hatch_Files/PNG/Soil/Green/GM.png"
+        }
+    ],
+    "hatchColors": {
+        "CH": "Black",
+        "CL-ML": "Black",
+        "CL": "Black",
+        "FL": "Red",
+        "GC-GM": "Black",
+        "GC": "Black",
+        "GM": "Green",
+        "GP-GC": "Black",
+        "GP-GM": "Black",
+        "GP": "Black",
+        "GW-GC": "Black",
+        "GW-GM": "Black",
+        "GW": "Black",
+        "MH": "Black",
+        "ML": "Black",
+        "OH": "Black",
+        "OL": "Black",
+        "PEAT": "Black",
+        "SC": "Black",
+        "SC-SM": "Black",
+        "SM": "Cyan",
+        "SP": "Black",
+        "SP-SC": "Black",
+        "SP-SM": "Black",
+        "SW": "Blue",
+        "SW-SC": "Black",
+        "SW-SM": "Black",
+        "TILL": "Green",
+        "TS": "Black",
+        "Asphalt": "Black",
+        "Bentonite": "Black",
+        "Concrete": "Black",
+        "Earth": "Black",
+        "Anhydrite": "Black",
+        "Basaltic_Flows": "Black",
+        "Breccia": "Black",
+        "Chalk": "Black",
+        "Coal": "Black",
+        "Conglomerate": "Black",
+        "Diamicton": "Black",
+        "Dolomite": "Black",
+        "Gneiss": "Black",
+        "Granite": "Black",
+        "Gypsum": "Black",
+        "Igneous_Rock": "Black",
+        "Limestone": "Black",
+        "Loess": "Black",
+        "Marble": "Black",
+        "Mudstone": "Black",
+        "Oil_Shale": "Black",
+        "Porphyritic_Rock": "Black",
+        "Quartz": "Black",
+        "Quartzite": "Black",
+        "Rock_Salt": "Black",
+        "Salt": "Black",
+        "Sandstone": "Maroon",
+        "Schist": "Black",
+        "Serpentine": "Black",
+        "Shale": "Black",
+        "Siltstone": "Black",
+        "Slate": "Black",
+        "Soapstone": "Black",
+        "Tuff": "Black",
+        "Zeolitic_Rock": "Black",
+        "Argillaceous": "Black",
+        "Bentonite_Rock": "Black",
+        "Clay_ClayShale": "Black",
+        "Gravel_Conglomerate1": "Black",
+        "Gravel_Conglomerate2": "Black",
+        "Igneous_Rock2": "Black"
+    },
+    "SectionName": "Section A",
+    "Unit": "m",
+    "HorizontalF": 200,
+    "HorizontalM": 200,
+    "VerticalF": 200,
+    "VerticalM": 200,
+    "GridlineThickness": 1,
+    "LineThickness": 1,
+    "PointSize": 10,
+    "FontSize": 26,
+    "TestHoleWidth": 6,
+    "WaterSymbolSize": 50,
+    "HatchScale": 30,
+    "W": 30,
+    "xH": 15,
+    "ShowGridlines": true
+}

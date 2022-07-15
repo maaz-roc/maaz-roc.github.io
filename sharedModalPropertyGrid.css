@@ -1,0 +1,947 @@
+/* CSS extracted from header footer after implementing feedback */
+/* The idea is that all css shared between cross section and header footer should go here */
+
+.modalAppContainer,
+.modalAppContainer .propertyGrid,
+.modalAppContainer .ef-ruler .ruler,
+.ui-widget,
+.ui-widget input,
+.ui-widget select,
+.ui-widget textarea,
+.ui-widget button,
+#imgArea .centerText,
+.context-menu-item span,
+.boxBadge,
+.titleTop,
+.titleLeft,
+.tick text,
+.canvasTooltip,
+.crossSectionTooltip {
+    font-family: var(--headerFooterApplicationFont);
+}
+
+.propertyGrid textarea {
+    padding: 5px;
+    border-radius: 4px;
+    outline: none;
+    height: auto !important;
+    box-sizing: border-box;
+    overflow-y: scroll;
+    width: 100%;
+    min-height: 60px;
+    resize: none;
+}
+
+.propertyGrid .toggledOff {
+    opacity: 0.3;    
+}
+
+.propertyGrid .iconCheckbox {
+    width: 15px;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    align-content: middle;
+    justify-items: center;
+    margin-left: 0px !important;
+}
+.propertyGrid .iconCheckbox i {
+    width: 100%;
+    height: 100%;
+    font-size: 11px;
+    text-align: center;
+}
+
+.propertyGrid .fontStyle .combinedRowContainer {
+    margin-left: 2px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-items: center;
+}
+
+.propertyGrid .location .combinedRowContainer {
+    display: grid;
+    grid-template-columns: 50px 50px;
+}
+
+.propertyGrid .pgCell.invalidInput input {
+    border: 1px solid rgb(220, 53, 69);
+}
+
+.combinedRowContainer {
+    display: flex;
+    flex-direction: row;
+}
+
+.combinedRowContainer > *:not(:first-child) {
+    margin-left: 5px;
+}
+
+.propertyGrid {
+    font-size: 10px;
+    width: 250px;
+    font-family: Arial;
+    color: #ffffff;
+    user-select: none;
+    height: auto;
+}
+
+.propertyGridCol .propertyGridSection:first-child {
+    margin-bottom: 10px;
+    flex-grow: 1;
+}
+.propertyGridCol .propertyGridSection:last-child {
+    margin-top: auto;
+    margin-bottom: 20px;
+}
+
+.propertyGridSelected {
+    position: relative; /* for the text */
+    height: 100%;
+    min-height: 150px;
+}
+
+.propertyGridCol .guidingText {
+    color: #ffffff;
+    position: absolute;
+    top: 50%;
+    font-size: 12px;
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    align-content: center;
+    align-items: center;
+    width: 100%;
+    transform: translate(0, -50%);
+}
+
+.propertyGridText {
+    color: #ffffff;
+    font-size: 11px;
+    line-height: 18px;
+    border-top: 1px solid darkgray;
+    border-bottom: 1px solid darkgray;
+    background-color: #383838;
+}
+
+.propertyGrid table {
+    width: 100%;
+}
+
+.propertyGrid .pgCell:first-child,
+.propertyGrid .pgCell:last-child {
+    width: 50%
+}
+
+.propertyGrid .pgRow {
+    height: 20px;
+}
+
+/* center checkbox inside div */
+.propertyGrid td > input[type="checkbox"] {
+    float: left;
+    margin: 0 auto;
+}
+
+.propertyGridCol {
+    overflow: auto;
+    overflow-x: hidden;
+    background-color: #383838;
+    z-index: 1000;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+@keyframes slide-out {
+    0% { transform: translateX(0%); }
+    100% { transform: translateX(-100%); }
+}
+
+@-webkit-keyframes slide-out {
+    0% { -webkit-transform: translateX(0%); }
+    100% { -webkit-transform: translateX(-100%); }
+}
+
+.propertyGrid .pgTable,
+.propertyGrid .pgTable tr,
+.propertyGrid .pgTable td {
+    background-color: #383838;
+    border-color: darkgray;
+    border-style: solid;
+    border-width: 0px 1px 1px 1px;
+}
+
+.propertyGrid input[type=text],
+.propertyGrid select {
+    background-color: #383838;
+    color: #ffffff;
+    width: 100%;
+    border: 0px;
+}
+
+/* Those two properties act together to create collapsible rows */
+.pgRow.rowCollapsed {
+    display: none;
+}
+
+.propertyGrid .pgGroupRow {
+    user-select : none;
+    cursor : pointer;
+}
+
+.propertyGrid .pgGroupRow > td {
+    height: 20px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+.propertyGrid .pgGroupRow td > div {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.propertyGrid .pgGroupRow td > div > i {
+    width: 10px;
+    color: gray;
+    height: 16px;
+    font-size: 16px;
+    line-height: 16px;
+}
+
+.propertyGrid .pgGroupRow span {
+    width: 100%;
+    margin-left: 5px;
+}
+
+.propertyGrid .pgGroupRow,
+.propertyGrid .pgGroupRow .pgGroupCell{
+    background-color: #e6e6e6;
+    color: black;
+}
+
+.propertyGrid .pgRow:focus-within {
+    color: #e35305;
+}
+
+.propertyGrid .pgRow.show3dOnly {
+    display: none;
+}
+
+.propertyGrid.propertyGridShowing3d .show3dOnly {
+    display: table-row;
+}
+
+.closedPropertyGrid {
+    /* width: 0px; */
+    /* display: none; */
+    /* animation: slide-out 1s forwards; */
+}
+
+.closePropertyGrid,
+.closePropertyGridBackground {
+    position: absolute;
+    left: -1px;
+    top: 27px;
+    width: 20px;
+    height: 40px;
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
+}
+
+.closePropertyGrid {
+    background-color: #383838;
+    color: lightgray;
+    z-index: 1001;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    user-select: none;
+}
+.closePropertyGridBackground {
+    z-index: 999;
+}
+
+.closePropertyGridBackground,
+.propertyGridCol {
+    box-shadow: 0px 0px 5px 2px lightgray
+}
+
+.propertyGridButtonContainer {
+    display: flex;
+    width: 100%;
+    margin-top: 2px;
+    padding: 0px 2px;
+    justify-content: center;
+    align-items: left;
+    flex-direction: column;
+}
+
+.propertyGridButtonContainer > * {
+    margin-bottom: 0px;
+}
+
+.propertyGridButton {
+    min-width: 80px;
+    color: #e35205;
+    text-decoration: underline;
+    font-size: 11px;
+}
+
+.propertyGrid .sp-replacer {
+    --colorPickerHeight: 11px;
+    padding: 2px 1px 2px 2px;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: auto 16px;
+    gap: 2px;
+    justify-items: center;
+    align-content: center;
+    border: 0px;
+    background-color: #383838;
+}
+
+.propertyGrid .sp-preview {
+    margin:auto;
+    width: 100%;
+    height: var(--colorPickerHeight);
+    display: flex;
+    align-self: center;
+    justify-self: center;
+    align-content: center;
+    padding: 0px;
+    justify-content: center;
+    align-items: center;
+    position: static;
+    border: 0px;
+}
+
+.sp-button-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    align-content: center;
+}
+
+.sp-button-container > div {
+    margin-left: 5px;
+}
+
+.sp-button-container i {
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.sp-button-container i:hover {
+    text-decoration: none;
+}
+
+.propertyGrid .sp-preview-inner {
+    margin: auto;
+    width: 100%;
+    height: 100%;
+    position: static;
+}
+
+.propertyGrid .sp-dd {
+    color: white;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    text-justify: center;
+    justify-content: center;
+    padding: 0px;
+    line-height: var(--colorPickerHeight);
+    height: var(--colorPickerHeight);
+}
+
+.propertyGrid .patternAndColor .pgCell:last-child > div {
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+.propertyGrid .patternAndColor .patternPicker .sp-preview-inner,
+.propertyGrid .hatch .patternPicker .sp-preview-inner {
+    background-repeat-x: repeat;
+    background-repeat-y: repeat;
+    background-size: auto calc(var(--zoomScale) * var(--hatchRepeat) * 750%);
+    background-color: transparent;
+}
+
+.propertyGrid .hatch .sp-preview {
+    display: none;
+}
+
+.propertyGrid .hatch .patternName {
+    color: white;
+    justify-self: left;
+    padding-left: 2px;
+}
+
+.customDropdown {
+    padding-left: 3px;
+    padding-right: 3px;
+}
+
+.customDropdown.disabled {
+    color: rgb(170, 170, 170);
+}
+
+.customDropdownButton {
+}
+
+.customDropdownMenu {
+    border: 1px solid darkgray;
+    position: absolute;
+    width: 100%;
+    height: fit-content;
+    background-color: #383838;
+}
+
+.customDropdownMenu:not(.open) {
+    display: none;
+}
+
+
+.customMultiselect option::before {
+    font-family: "Font Awesome 5 Free";
+    content:"\f0c8";
+    display: inline-block;
+    width: 12px;
+    font-weight: 900;
+}
+
+.customMultiselect option:checked::before {
+    content:"\f14a"
+}
+
+.multiselectorOption {
+    margin-left: 12px;
+}
+
+.propertyGrid label {
+    margin: 0px;
+    color: #aaaaaa;
+}
+
+.propertyGrid .ui-spinner {
+    background-color: #383838;
+    width: 100%;
+    border: 0px;
+    margin: 0px;
+    padding: 0px;
+}
+
+.propertyGrid .ui-spinner input {
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    margin-bottom: 1px;
+    padding: 0px;
+    padding-left: 3px;
+}
+
+.propertyGrid .ui-spinner .ui-button {
+    background-color: #383838;
+    color: white;
+    /* width: 20px; */
+}
+
+.propertyGrid .ui-spinner .ui-icon {
+    background-image: url(images/ui-icons_ffffff_256x240.png);
+}
+
+.propertyGrid .ui-spinner a {
+    border-left-color: transparent !important;
+}
+
+.propertyGrid .ui-spinner a:active {
+    border-top-color: transparent;
+    border-bottom-color: transparent;
+    border-right-color: transparent;
+}
+
+.ui-dialog {
+    z-index: 99999;
+}
+
+/* css adapted from print modal on crosssection project */
+.customModal .form-control {
+    height: 35px;
+    padding: 0px 12px;
+}
+
+.customModal {
+    top: 25%;
+    height: fit-content;
+}
+
+.customModal .modal-header{
+    padding: 2px;
+    height: 40px;
+    padding-left: 15px;
+}
+
+.customModal .modal-header button.close {
+    padding: 8px;
+}
+
+.customModal .modal-body{
+    min-height: 0px;
+    height: fit-content;
+    padding: 5px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.customModal .modal-body label{
+    color: gray;
+    margin-bottom: 0px;
+    line-height: 10px;
+    font-size: 10px;
+    font-family: Arial;
+}
+
+.customModal .modal-footer{
+    padding: 5px 15px;
+}
+
+.customModal .modal-footer {
+    display: flex;
+    flex-direction: row;
+}
+
+.customModal .modal-dialog {
+    max-width: 520px;
+    width: 520px;
+}
+
+.customModal .modal-footer .printMessage {
+    width: fit-content;
+    margin-right: auto;
+    color: #e35305;
+    padding: 0.25rem 0.5rem;
+    height: 31px;
+    line-height: 1.5;
+    font-size: 0.875rem;
+    display:flex;
+    justify-content: center;
+    align-content: center;
+    justify-items: center;
+    align-items: center;
+}
+
+.customModal .modal-header .close {
+    position: absolute;
+    right: 5px;
+    top: 0px;
+}
+
+.custom-dropdown a i {
+    font-size: 12px;
+    position: absolute;
+    right: 0;
+    top: 5px;
+    background-color: #fff;
+    width: 25px;
+    height: 20px;
+    padding-right: 5px;
+    padding-top: 5px;
+}
+
+.custom-dropdown select {
+    display: none;
+}
+
+.topmenu {
+    position: relative;
+    width: 100%;
+    display: inline-flex;
+    flex-direction: row;
+}
+
+.topmenu-section {
+    padding: 6px;
+    display: inline-flex;
+    flex-direction: row;
+}
+
+.topmenu-zoom-section {
+    margin-left: auto;
+}
+
+.menu-item {
+    position: relative;
+    display: inline-block;
+    /* padding: 2px; */
+    width: 29px;
+    height: 32px;
+    text-align: center;
+    margin: auto;
+}
+
+.menu-item a {
+    /* position: relative; */
+    left: 0px;
+    top: 0px;
+}
+
+.topmenu .btn-group-toggle .btn.active {
+    background-color: #e35305;
+    color: white;
+}
+
+.topmenu .btn-group-toggle .btn.focus {
+    box-shadow: 0 0 0 0.5px rgb(0 123 255 / 50%)
+}
+
+.topmenu-section .dropdown .btn {
+    background: transparent !important;
+    box-shadow: unset !important;
+    border: unset !important;
+    padding-right: 2px;
+    padding-left: 2px;
+}
+
+.topmenu-section .dropdown .btn span {
+    left: 15px;
+}
+
+.topmenu-section .dropdown .btn::after {
+    margin-right: 0px;
+}
+
+.menu-item.list {
+    display: var(--enableListFeature);
+}
+
+.menu-tooltip {
+    display: inline-block;
+    padding: 2px;
+    width: 45px;
+    text-align: center;
+    margin: auto;
+    /* border: black 1pt solid; */
+}
+
+.coord-tooltip-follow-cursor {
+    position: absolute;
+    height: 15px;
+    width: 60px;
+    border: 1px solid lightgray;
+    background: rgb(230, 230, 230);
+    display: flex;
+    align-items: center;
+    box-sizing: content-box;
+    user-select: none;
+    white-space: nowrap;
+    z-index: 9999;
+}
+
+.coord-tooltip-follow-cursor > div {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+    margin: 0px;
+    font-size: 11px;
+    width: 100%;
+}
+
+.toolbarSeparator {
+    height: 30px;
+    width: 6px;
+    margin-right: 6px;
+    top: 50%;
+    transform: translateY(-50%);
+    position: relative;
+    display: inline-block;
+    border-right: 1px solid black;
+}
+
+.topmenu * {
+    user-select: none;
+}
+
+.toolbarImg {
+
+    object-fit: contain;
+    /* vertical-align: middle; */
+    display: inline-block;
+    /* margin: auto; */
+    /* margin-left: auto; */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    color: #000;
+    width: 32px;
+    height: 32px;
+    border: 1px solid transparent; /* avoids displacing element when adding border */
+    box-sizing: border-box;
+}
+
+.toolbarImg:hover {
+    border: 1px solid grey;
+    border-radius: 3px;
+}
+
+.menu-item.toggledOff {
+    opacity: 0.5;
+}
+
+.undo.toggledOff .toolbarImg:hover,
+.redo.toggledOff .toolbarImg:hover,
+.toolbarImg.ExportIcon:hover,
+.toolbarImg.ImportIcon:hover {
+    border-color: transparent;
+    border-radius: 0;
+}
+
+.topmenu .dropdown {
+    box-sizing: border-box;
+}
+
+.toolbarImg.far {
+    font-size: 29px;
+}
+
+@media only screen and (max-width: 1000px) {
+    .appNameCol, .headerButtons .videoButtonCol {
+        display: none;
+    }
+
+    .headerButtons > div {
+        justify-content: right;
+        width: 125px;
+    }
+
+    .headerButtons > div > div {
+        width: fit-content;
+    }
+
+    .reportTitleCol {
+        text-align: left !important;
+    }
+}
+
+body {
+font-family: Arial, sans-serif;
+}
+
+.charttitle {
+text-align: center;
+}
+
+.appModal .modal-xl {
+    margin-left: 0px;
+    margin-top: 0px;
+    height: 100%;
+    width: 100%;
+    max-width: 100%;
+    max-height: 100%;
+    padding: 0.75%;
+}
+
+.appModal .modal-content {
+    height: 100%;
+    width: 100%;
+}
+
+.appModal .modal-body {
+    max-height: 100%;
+    max-width: 100%;
+    width: 100%;
+}
+
+.appModal .modal-header {
+    padding-top: 2px;
+}
+
+.appModal .modal-footer {
+    padding: 6px;
+}
+
+.appModal .modal-header,
+.appModal .modal-footer {
+    background-color: #f0f8ff;
+}
+
+.appModal .modal-footer > .row > .col {
+    display: flex;
+    width: 400px;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    align-content: center;
+    flex-direction: row;
+}
+
+.appModal .modal-footer button {
+    min-width: 80px;
+    margin-left: 10px;
+}
+
+.appModal .printModal .modal-footer .printMessage {
+    width: fit-content;
+    margin-right: auto;
+    color: #e35305;
+    padding: 0.25rem 0.5rem;
+    height: 31px;
+    line-height: 1.5;
+    font-size: 0.875rem;
+    display:flex;
+    justify-content: center;
+    align-content: center;
+    justify-items: center;
+    align-items: center;
+}
+
+.appModal .btn-outline-primary {
+    border-color: #e35305;
+    color: #e35305;
+}
+
+.appModal .btn-outline-primary:hover {
+    background-color: #e35305;
+    color: white;
+}
+
+.appModal #charttitle {
+    font-size: 22px;
+}
+
+.appModal .appName {
+    font-size: 22px;
+}
+
+.headerButtons {
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    justify-content: flex-end;
+    flex-direction: row;
+    margin-left: auto;
+}
+
+.reportTitleCol {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    align-content: center;
+    justify-items: center;
+    justify-content: center;
+}
+
+.appModal .modal-header .close {
+    padding: 0px;
+    margin: 0px;
+}
+
+.headerButtons > div {
+    padding-right: 5px;
+}
+
+.headerButtons > div > div {
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    min-width: unset;
+}
+
+.headerButton {
+    display: flex;
+    flex-direction: row;
+    justify-items: center;
+    align-items: center;
+    color: rgb(131, 146, 165);
+    font-size: 15px;
+}
+
+.headerButton a {
+    color: rgb(131, 146, 165);
+}
+
+.headerButton > div {
+    margin-left: 2px;
+}
+
+.headerIcon {
+    width: 22px;
+    height: 22px;
+}
+
+.videoIcon {
+    width: 25px;
+}
+
+.sp-container {
+    /* background-color: #383838; */
+    /* background-color: white; */
+    background-color: #e6e6e6;
+    border-color: darkgray;
+}
+
+.sp-palette-container {
+    border-right-color: darkgray;
+}
+
+.sp-picker-container {
+    border-left-color: darkgray;
+    border-left-width: 0px;
+}
+
+/* https://codepen.io/CarliBotes/pen/xewRZY */
+
+.scrollbar
+{
+    height: 300px;
+    width: 30px;
+    background: #F5F5F5;
+    overflow-y: scroll;
+    margin: 25px;
+}
+
+.force-overflow
+{
+    min-height: 450px;
+}
+
+.style-6::-webkit-scrollbar-track
+{
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    background-color: #F5F5F5;
+}
+
+.style-6::-webkit-scrollbar
+{
+    width: 7px;
+    background-color: #F5F5F5;
+}
+
+.style-6::-webkit-scrollbar-thumb
+{
+    background-color: #999999;	
+    background-image: -webkit-linear-gradient(45deg,
+                                                rgba(255, 255, 255, .2) 25%,
+                                                transparent 25%,
+                                                transparent 50%,
+                                                rgba(255, 255, 255, .2) 50%,
+                                                rgba(255, 255, 255, .2) 75%,
+                                                transparent 75%,
+                                                transparent)
+}
